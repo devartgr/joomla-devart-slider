@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+
+    <changelog>
+        <element>com_devartslider</element>
+        <type>component</type>
+        <version>1.0.0</version>
+
+        <addition>
+            <item>Added full Joomla 6 native DevArt Slider component with modern MVC architecture</item>
+            <item>Added frontend DevArt Slider module integration</item>
+            <item>Added 14 production-ready slider templates</item>
+            <item>Added Latest Articles source mode</item>
+            <item>Added Featured Articles source mode</item>
+            <item>Added Selected Articles source mode</item>
+            <item>Added Custom Slides source mode</item>
+            <item>Added image slide rendering support</item>
+            <item>Added video slide rendering support</item>
+            <item>Added hover video play/pause controls</item>
+            <item>Added export slider configuration support</item>
+            <item>Added frontend file-based cache rendering system</item>
+            <item>Added configurable cache duration settings</item>
+            <item>Added typography controls</item>
+            <item>Added theme presets including red, blue, green, yellow, dark and light</item>
+            <item>Added dashboard statistics and production recommendations</item>
+            <item>Added administrator cache clear action</item>
+            <item>Added Joomla ACL permissions support</item>
+            <item>Added GitHub-based Joomla update server support</item>
+        </addition>
+
+        <change>
+            <item>Slider architecture designed specifically for Joomla 6 and PHP 8.2+</item>
+            <item>Frontend rendering optimized for high-traffic editorial environments</item>
+            <item>Template rendering isolated with dedicated renderer architecture</item>
+            <item>CSS and JavaScript namespaced for safe third-party template compatibility</item>
+            <item>Mobile template behavior optimized for responsive frontend rendering</item>
+            <item>Video rendering integrated with lightweight frontend controls</item>
+            <item>Cache-first architecture implemented to reduce database load</item>
+            <item>Cloudflare and CDN-friendly frontend rendering strategy used throughout</item>
+            <item>Production-safe frontend rendering with controlled query limits</item>
+            <item>Modern Joomla service provider and MVCComponent architecture used throughout</item>
+        </change>
+
+        <security>
+            <item>Added SQL injection protection using Joomla database APIs and parameterized queries</item>
+            <item>Added XSS protection through proper output escaping</item>
+            <item>Added CSRF protection for administrator actions</item>
+            <item>Added ACL enforcement for administrator operations</item>
+            <item>Added protected cache directory structure with index.html isolation</item>
+            <item>Added strict input validation for slider configuration values</item>
+        </security>
+
+        <note>
+            <item>Initial public production release of DevArt Slider for Joomla 6</item>
+            <item>Designed for editorial, magazine, news and high-traffic Joomla websites</item>
+            <item>Built for Joomla 6 only with PHP 8.2+</item>
+            <item>Always test on a staging environment before production deployment</item>
+        </note>
+    </changelog>
+
+</changelogs>
