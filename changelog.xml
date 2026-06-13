@@ -4,6 +4,40 @@
     <changelog>
         <element>com_devartslider</element>
         <type>component</type>
+        <version>1.0.3</version>
+
+        <addition>
+            <item>Added dedicated cached image width and height controls for thumbnail generation</item>
+            <item>Added automatic thumbnail cache retention management</item>
+            <item>Added scheduled cleanup support for expired cached thumbnail images</item>
+        </addition>
+
+        <fix>
+            <item>Fixed Thumbnail Retention Days setting not affecting cached thumbnail files</item>
+            <item>Fixed automatic thumbnail cache cleanup for expired cached images</item>
+            <item>Fixed image cache maintenance workflow for long-running production installations</item>
+        </fix>
+
+        <change>
+            <item>Separated slider display dimensions from cached image dimensions</item>
+            <item>Improved image handling flexibility for card-based and multi-column slider templates</item>
+            <item>Improved thumbnail generation workflow for templates using different visual layouts</item>
+            <item>Improved thumbnail cache maintenance for high-traffic editorial and news websites</item>
+            <item>Improved cached image storage management for long-running production installations</item>
+        </change>
+
+        <note>
+            <item>Thumbnail Retention Days now controls automatic cleanup of expired cached thumbnail images</item>
+            <item>Manual Clear Image Cache functionality remains available</item>
+            <item>No database schema changes introduced</item>
+            <item>No frontend rendering architecture changes introduced</item>
+            <item>Recommended update for all installations using image caching</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartslider</element>
+        <type>component</type>
         <version>1.0.0</version>
 
         <addition>
