@@ -1,27 +1,29 @@
 # DevArt Slider for Joomla
 
-Professional slider builder for Joomla 6, designed for editorial, news, magazine, landing pages, and high-performance content-heavy websites.
+Professional slider builder for Joomla 6, designed for editorial, news, magazine, landing pages, marketing campaigns, and high-performance content-heavy websites.
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.0-orange)
+![Release](https://img.shields.io/badge/Version-1.0.3-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
 
 ## Overview
 
-DevArt Slider is a modern Joomla 6 slider package built for stable frontend content presentation, high-traffic performance, video-enabled hero sections, editorial storytelling, and production-safe rendering.
+DevArt Slider is a modern Joomla 6 slider package built for stable frontend content presentation, editorial storytelling, featured content promotion, video-enabled hero sections, and production-safe rendering.
 
-It is designed for editorial, magazine, news, landing page, and enterprise Joomla websites that need a clean, secure, reliable, cache-friendly slider solution without unnecessary frontend bloat.
+Designed specifically for editorial, magazine, news, landing page, corporate, and enterprise Joomla websites, DevArt Slider focuses on performance, reliability, security, and maintainability while remaining fully compatible with Joomla 6 and modern PHP versions.
+
+The package includes both a Joomla component and a Joomla frontend module for flexible deployment across any Joomla website.
 
 ---
 
 ## Features
 
-### Multiple Professional Templates
+### Professional Slider Templates
 
-Includes 14 production-ready templates:
+Includes multiple production-ready templates designed for different content presentation styles:
 
 - Classic Hero
 - Full Width Overlay
@@ -38,15 +40,17 @@ Includes 14 production-ready templates:
 - Hover Editorial Cards
 - Clean Fade Hero
 
-Templates are designed for:
+Suitable for:
 
-- editorial homepages
-- featured content blocks
-- landing pages
-- magazine front pages
-- storytelling sections
-- promotional hero areas
-- video showcase sections
+- Editorial homepages
+- News portals
+- Magazine front pages
+- Landing pages
+- Featured content blocks
+- Marketing campaigns
+- Product showcases
+- Storytelling sections
+- Video hero areas
 
 ---
 
@@ -61,38 +65,42 @@ Supports multiple source modes:
 
 Custom Slides support:
 
-- title
-- subtitle / intro
-- badge
-- date
-- read more
-- local image
-- local MP4 / WEBM video
-- poster image
-- custom links
+- Title
+- Subtitle
+- Intro text
+- Badge label
+- Date display
+- Read More button
+- Custom links
+- Local images
+- MP4 video
+- WEBM video
+- Poster images
 
 Perfect for:
 
-- editorial stories
-- breaking news
-- campaigns
-- marketing pages
-- homepage hero sliders
+- Breaking news
+- Featured stories
+- Marketing campaigns
+- Product launches
+- Homepage hero areas
+- Editorial promotions
 
 ---
 
-### Video Support
+### Native Video Support
 
-Native video slide support:
+Built-in video slide support without external dependencies.
 
-- MP4 / WEBM local video
-- poster image support
-- autoplay support
-- hover play / pause controls
-- mobile-safe rendering
-- lightweight frontend implementation
+Features:
 
-Designed without heavy third-party video dependencies.
+- MP4 video support
+- WEBM video support
+- Poster image support
+- Autoplay support
+- Hover play/pause controls
+- Mobile-friendly rendering
+- Lightweight frontend implementation
 
 ---
 
@@ -102,37 +110,41 @@ Display sliders anywhere using Joomla module positions.
 
 Features:
 
-- slider selector
+- Slider selector
 - Joomla native module integration
-- access control support
-- menu assignment support
+- Menu assignment support
+- Access control support
+- Flexible positioning
 
 Ideal for:
 
-- homepage hero
-- sidebar highlights
-- category landing pages
-- featured article blocks
-- campaign pages
+- Homepage heroes
+- Sidebar highlights
+- Landing pages
+- Featured article areas
+- Marketing campaigns
 
 ---
 
-### Joomla Component Management
+### Slider Management
 
-Manage sliders directly inside Joomla administrator.
+Manage sliders directly through Joomla administrator.
 
 Features:
 
-- slider CRUD
-- template selection
-- typography controls
-- theme presets
-- transition settings
-- autoplay controls
-- arrows / dots controls
-- height / ratio controls
-- cache settings
-- export / import workflow
+- Slider CRUD
+- Template selection
+- Theme presets
+- Typography controls
+- Transition settings
+- Autoplay settings
+- Navigation controls
+- Arrow controls
+- Dot controls
+- Height settings
+- Ratio settings
+- Cache settings
+- Export support
 
 ---
 
@@ -147,36 +159,78 @@ Built-in theme presets:
 - Dark
 - Light
 
-Theme colors affect template accents consistently.
+Themes provide consistent styling across supported templates.
 
 ---
 
 ### Typography Controls
 
-Global typography support:
+Global typography management:
 
-- title size
-- intro size
-- badge styling
-- date styling
-- read more styling
-- content color controls
+- Title size
+- Intro size
+- Badge styling
+- Date styling
+- Read More styling
+- Content color controls
 
-Consistent across templates.
+Provides consistent presentation across templates.
+
+---
+
+### Advanced Image Handling
+
+Image rendering is designed for performance-oriented websites.
+
+Features:
+
+- Original Image mode
+- Cached Resize mode
+- Cached Crop mode
+- Dedicated cached image dimensions
+- Independent slider dimensions
+- Automatic thumbnail generation
+- Automatic thumbnail retention management
+- Manual image cache cleanup tools
+
+Benefits:
+
+- Reduced bandwidth usage
+- Faster frontend rendering
+- Improved cache efficiency
+- Better support for card-based templates
+- Improved performance on high-traffic websites
+
+---
+
+### Intelligent Thumbnail Cache
+
+DevArt Slider includes a dedicated thumbnail cache system.
+
+Features:
+
+- File-based thumbnail cache
+- Cached image generation
+- Configurable thumbnail retention period
+- Automatic expired thumbnail cleanup
+- Manual image cache cleanup
+- Cloudflare-friendly architecture
+
+Designed specifically for editorial websites that continuously publish new content and images.
 
 ---
 
 ### Joomla Native Updates
 
-DevArt Slider supports Joomla native updates via GitHub.
+Supports Joomla native updates via GitHub.
 
-Once installed, future updates are available through:
+After installation future releases can be installed through:
 
-`System → Extensions → Update`
+System → Extensions → Update
 
-Update server:
+Update Server:
 
-`https://raw.githubusercontent.com/devartgr/joomla-devart-slider/main/update.xml`
+https://raw.githubusercontent.com/devartgr/joomla-devart-slider/main/update.xml
 
 ---
 
@@ -198,18 +252,18 @@ This package installs:
 
 ## Installation
 
-1. Download the latest release from GitHub
-2. Go to:
+1. Download the latest release package
+2. Open:
 
-`System → Extensions → Install`
+   System → Extensions → Install
 
-3. Upload the package ZIP file
+3. Upload the ZIP package
 4. Open:
 
-`Components → DevArt Slider`
+   Components → DevArt Slider
 
-5. Create your first slider
-6. Publish the module where needed
+5. Create a slider
+6. Publish the module where required
 
 ---
 
@@ -219,24 +273,26 @@ Built for production environments.
 
 Features include:
 
-- cache-first frontend rendering
-- file-based frontend cache
-- configurable cache duration
-- minimal frontend JavaScript
-- minimal CSS footprint
-- safe query limits
+- Cache-first frontend rendering
+- File-based frontend cache
+- Dedicated thumbnail cache
+- Configurable cache duration
+- Configurable thumbnail retention
+- Minimal frontend JavaScript
+- Lightweight CSS architecture
+- Safe query limits
 - Joomla Page Cache friendly
 - CDN friendly
 - Cloudflare compatible
-- high-traffic deployment friendly
-- lightweight video rendering
+- High-traffic deployment friendly
 
 Suitable for:
 
-- editorial portals
-- news websites
-- magazine websites
-- enterprise Joomla deployments
+- News portals
+- Editorial websites
+- Magazine websites
+- Enterprise Joomla deployments
+- High-volume content websites
 
 ---
 
@@ -246,97 +302,85 @@ Suitable for:
 - CSRF protection for administrator actions
 - SQL injection protection through Joomla database APIs
 - XSS-safe frontend rendering
-- strict input validation
-- protected cache directory structure
-- safe Joomla native architecture
+- Strict input validation
+- Protected cache directory structure
+- Secure Joomla native architecture
 - GPL licensed
 - JED-ready packaging
 
 ---
 
-## Compatibility Notes
+## Compatibility
 
 Supported:
 
 - Joomla 6.x
 - PHP 8.2+
 - Joomla native update system
-- modern Joomla MVC architecture
+- Modern Joomla MVC architecture
 
-Not supported:
+Not Supported:
 
 - Joomla 3
 - Joomla 4
 - Joomla 5
-- legacy PHP versions
+- Legacy PHP versions
 
 ---
 
 ## Current Version
 
-1.0.0
+1.0.3
 
 ---
 
-## Changelog 1.0.0
+## What's New in 1.0.3
 
 ### Added
 
-- Initial public production release
-- Joomla 6 native component
-- Joomla frontend module
-- 14 professional slider templates
-- article source modes
-- custom slide source mode
-- local image and video support
-- hover video controls
-- theme presets
-- typography controls
-- export / import support
-- file-based frontend caching
-- GitHub update server integration
+- Dedicated cached image width and height controls
+- Automatic thumbnail cache retention management
+- Automatic expired thumbnail cleanup support
+
+### Fixed
+
+- Thumbnail Retention Days setting not affecting cached thumbnail files
+- Automatic thumbnail cache cleanup workflow
+- Long-term image cache maintenance behavior
 
 ### Improved
 
-- cache-first frontend architecture
-- high-traffic rendering strategy
-- Cloudflare-friendly output
-- mobile template behavior
-- production-safe query limits
-- isolated renderer architecture
-- namespaced CSS / JavaScript
+- Separation of slider display dimensions and cached image dimensions
+- Image handling flexibility for card-based templates
+- Thumbnail generation workflow
+- Thumbnail cache management for high-traffic websites
+- Long-term cached image storage management
 
 ---
 
 ## Production Recommendations
 
-Recommended defaults:
+Recommended settings for news and editorial websites:
 
-Frontend:
+### Frontend
 
-- enable caching
-- enable autoplay where appropriate
-- use optimized image sizes
-- prefer poster images for video slides
-- avoid excessive slide counts
+- Enable caching
+- Use Cached Resize images
+- Use optimized image dimensions
+- Limit excessive slide counts
+- Use poster images for video slides
 
-Performance:
+### Cache
 
-- cache duration: 15–60 minutes for news sites
-- longer cache for static promotional sliders
-- test Cloudflare cache behavior
+- Slider cache: 15–60 minutes
+- Thumbnail retention: 7–30 days
+- Use manual cache clearing only when required
 
-Content:
+### Content
 
-- use Featured or Selected Articles for curated homepage blocks
-- use Custom Slides for campaigns / marketing
-
----
-
-## Known Notes
-
-- Always test template compatibility and caching behavior before full production rollout
-- Video-heavy sliders should be tested on mobile devices before deployment
+- Use Featured Articles for homepage highlights
+- Use Selected Articles for curated content
+- Use Custom Slides for campaigns and promotions
 
 ---
 
@@ -344,7 +388,7 @@ Content:
 
 Kostas Stathopoulos  
 DevArt  
-https://devart.gr/
+https://devart.gr
 
 GitHub Repository:
 
@@ -352,8 +396,16 @@ https://github.com/devartgr/joomla-devart-slider
 
 ---
 
+## License
+
+GNU General Public License v3.0 (GPLv3)
+
+---
+
 ## Disclaimer / Limitation of Liability
 
 This software is provided "as is", without warranty of any kind.
 
-DevArt shall not be held liable for any damages, data loss, downtime, security issues,
+DevArt shall not be held liable for any damages, data loss, downtime, security incidents, business interruption, loss of profits, or other consequences arising from the use or inability to use this software.
+
+Always test updates in a staging environment before deploying to production systems.
