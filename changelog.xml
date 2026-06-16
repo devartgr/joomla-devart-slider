@@ -4,6 +4,50 @@
     <changelog>
         <element>com_devartslider</element>
         <type>component</type>
+        <version>1.0.4</version>
+
+        <addition>
+            <item>Added global Overlay Style system with Uniform, Bottom Focus and Left Focus modes</item>
+            <item>Added optional image shadow support for Split Image/Text Slider</item>
+            <item>Added overlay content mode support for Classic News Sidebar</item>
+            <item>Added active slide highlighting using selected theme colors in preview-based templates</item>
+            <item>Added enhanced editorial thumbnail presentation for Magazine Spotlight</item>
+        </addition>
+
+        <fix>
+            <item>Fixed overlay rendering behavior across multiple slider templates</item>
+            <item>Fixed situations where overlays could remain visible when disabled</item>
+            <item>Fixed navigation positioning inconsistencies in preview-based templates</item>
+            <item>Fixed dots and arrows rendering behavior in multiple templates</item>
+            <item>Fixed frontend template configuration inconsistencies</item>
+            <item>Fixed language string display issues in template configuration areas</item>
+        </fix>
+
+        <change>
+            <item>Improved Split Image/Text Slider navigation layout and theme integration</item>
+            <item>Improved Full Width Overlay template overlay handling</item>
+            <item>Improved Old Style Preview navigation and thumbnail behavior</item>
+            <item>Improved Classic News Sidebar preview rendering and navigation controls</item>
+            <item>Improved Magazine Spotlight editorial layout and thumbnail presentation</item>
+            <item>Improved overlay flexibility for editorial and magazine-focused designs</item>
+            <item>Removed unused Image Dark Overlay setting from Clean Fade Hero template</item>
+            <item>Removed unused Transition Effect and Transition Speed settings from Hover Overlay Cards template</item>
+            <item>Simplified template configuration by hiding controls not used by specific templates</item>
+            <item>Improved consistency between frontend rendering and administrator settings</item>
+        </change>
+
+        <note>
+            <item>No database schema changes introduced</item>
+            <item>No migration required</item>
+            <item>Existing sliders remain fully compatible</item>
+            <item>Safe update from all previous 1.0.x releases</item>
+            <item>Recommended update for all installations</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartslider</element>
+        <type>component</type>
         <version>1.0.3</version>
 
         <addition>
