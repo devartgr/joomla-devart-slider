@@ -4,7 +4,7 @@ Professional slider builder for Joomla 6, designed for editorial, news, magazine
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.3-orange)
+![Release](https://img.shields.io/badge/Version-1.0.4-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -37,7 +37,7 @@ Includes multiple production-ready templates designed for different content pres
 - Classic News Sidebar
 - Magazine Spotlight
 - Overlay Box Hero
-- Hover Editorial Cards
+- Hover Overlay Cards
 - Clean Fade Hero
 
 Suitable for:
@@ -136,7 +136,8 @@ Features:
 - Template selection
 - Theme presets
 - Typography controls
-- Transition settings
+- Overlay controls
+- Overlay style controls
 - Autoplay settings
 - Navigation controls
 - Arrow controls
@@ -145,6 +146,27 @@ Features:
 - Ratio settings
 - Cache settings
 - Export support
+
+---
+
+### Global Overlay System
+
+Built-in overlay engine shared across supported templates.
+
+Overlay Styles:
+
+- Uniform
+- Bottom Focus
+- Left Focus
+
+Overlay Controls:
+
+- Enable Overlay
+- Overlay Color
+- Overlay Opacity
+- Overlay Style
+
+Provides improved readability and editorial presentation without requiring template-specific overlay settings.
 
 ---
 
@@ -330,31 +352,48 @@ Not Supported:
 
 ## Current Version
 
-1.0.3
+1.0.4
 
 ---
 
-## What's New in 1.0.3
+## What's New in 1.0.4
 
 ### Added
 
-- Dedicated cached image width and height controls
-- Automatic thumbnail cache retention management
-- Automatic expired thumbnail cleanup support
+- Global Overlay Style system
+- Uniform overlay mode
+- Bottom Focus overlay mode
+- Left Focus overlay mode
+- Image shadow support for Split Image / Text Slider
+- Overlay content mode for Classic News Sidebar
+- Theme-colored active preview highlighting
+- Improved editorial thumbnail presentation for Magazine Spotlight
 
 ### Fixed
 
-- Thumbnail Retention Days setting not affecting cached thumbnail files
-- Automatic thumbnail cache cleanup workflow
-- Long-term image cache maintenance behavior
+- Overlay rendering inconsistencies across templates
+- Overlay disable behavior in affected templates
+- Navigation positioning issues in preview-based templates
+- Dots and arrows rendering issues in multiple templates
+- Template configuration inconsistencies
+- Language string display issues in template settings
 
 ### Improved
 
-- Separation of slider display dimensions and cached image dimensions
-- Image handling flexibility for card-based templates
-- Thumbnail generation workflow
-- Thumbnail cache management for high-traffic websites
-- Long-term cached image storage management
+- Split Image / Text Slider layout and navigation
+- Full Width Overlay rendering behavior
+- Old Style Preview navigation controls
+- Classic News Sidebar preview rendering
+- Magazine Spotlight editorial presentation
+- Overlay flexibility for editorial websites
+- Template-specific settings visibility
+- Administrator usability and configuration consistency
+
+### Removed
+
+- Unused Image Dark Overlay setting from Clean Fade Hero
+- Unused Transition Effect setting from Hover Overlay Cards
+- Unused Transition Speed setting from Hover Overlay Cards
 
 ---
 
