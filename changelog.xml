@@ -4,6 +4,37 @@
     <changelog>
         <element>com_devartslider</element>
         <type>component</type>
+        <version>1.0.5</version>
+
+        <addition>
+            <item>Added native DevArt Business source support</item>
+            <item>Added business category filtering with All Categories and Selected Categories modes</item>
+            <item>Added Include Child Categories option for business category filtering</item>
+            <item>Added Featured Handling option for businesses with Include Featured, Featured Only and Exclude Featured modes</item>
+            <item>Added business ordering support for slider source queries</item>
+        </addition>
+
+        <change>
+            <item>Extended slider source architecture to support multiple DevArt content sources</item>
+            <item>Business items are normalized into the existing slider item structure</item>
+            <item>Business source uses the existing slider rendering, image handling and cache pipeline</item>
+            <item>Business source configuration is intentionally simplified for featured business showcase use cases</item>
+            <item>Show Date is hidden for Business source because business listings are evergreen content</item>
+        </change>
+
+        <note>
+            <item>No template changes introduced</item>
+            <item>No CSS or JavaScript changes introduced</item>
+            <item>No database schema changes introduced</item>
+            <item>Existing article and custom slide sources remain fully compatible</item>
+            <item>Safe update from all previous 1.0.x releases</item>
+            <item>Recommended update for installations using DevArt Business</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartslider</element>
+        <type>component</type>
         <version>1.0.4</version>
 
         <addition>
