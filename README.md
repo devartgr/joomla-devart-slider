@@ -1,10 +1,10 @@
 # DevArt Slider for Joomla
 
-Professional slider builder for Joomla 6, designed for editorial, news, magazine, landing pages, marketing campaigns, and high-performance content-heavy websites.
+Professional slider builder for Joomla 6, designed for editorial, news, magazine, landing pages, marketing campaigns, business directories, and high-performance content-heavy websites.
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.4-orange)
+![Release](https://img.shields.io/badge/Version-1.0.5-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -13,7 +13,7 @@ Professional slider builder for Joomla 6, designed for editorial, news, magazine
 
 DevArt Slider is a modern Joomla 6 slider package built for stable frontend content presentation, editorial storytelling, featured content promotion, video-enabled hero sections, and production-safe rendering.
 
-Designed specifically for editorial, magazine, news, landing page, corporate, and enterprise Joomla websites, DevArt Slider focuses on performance, reliability, security, and maintainability while remaining fully compatible with Joomla 6 and modern PHP versions.
+Designed specifically for editorial, magazine, news, landing page, corporate, business directory, and enterprise Joomla websites, DevArt Slider focuses on performance, reliability, security, and maintainability while remaining fully compatible with Joomla 6 and modern PHP versions.
 
 The package includes both a Joomla component and a Joomla frontend module for flexible deployment across any Joomla website.
 
@@ -49,21 +49,33 @@ Suitable for:
 - Featured content blocks
 - Marketing campaigns
 - Product showcases
+- Business directories
 - Storytelling sections
 - Video hero areas
 
 ---
 
-### Flexible Content Sources
+## Flexible Content Sources
 
 Supports multiple source modes:
+
+### Joomla Articles
 
 - Latest Articles
 - Featured Articles
 - Selected Articles
-- Custom Slides
 
-Custom Slides support:
+### DevArt Business
+
+- All Categories
+- Selected Categories
+- Include Child Categories
+- Featured Handling
+- Ordering
+
+### Custom Slides
+
+Supports:
 
 - Title
 - Subtitle
@@ -77,18 +89,11 @@ Custom Slides support:
 - WEBM video
 - Poster images
 
-Perfect for:
-
-- Breaking news
-- Featured stories
-- Marketing campaigns
-- Product launches
-- Homepage hero areas
-- Editorial promotions
+The slider architecture is designed to support multiple native DevArt content sources while preserving a single rendering engine and common template system.
 
 ---
 
-### Native Video Support
+## Native Video Support
 
 Built-in video slide support without external dependencies.
 
@@ -104,7 +109,7 @@ Features:
 
 ---
 
-### Joomla Frontend Module
+## Joomla Frontend Module
 
 Display sliders anywhere using Joomla module positions.
 
@@ -122,17 +127,19 @@ Ideal for:
 - Sidebar highlights
 - Landing pages
 - Featured article areas
+- Featured business areas
 - Marketing campaigns
 
 ---
 
-### Slider Management
+## Slider Management
 
 Manage sliders directly through Joomla administrator.
 
 Features:
 
 - Slider CRUD
+- Multiple content sources
 - Template selection
 - Theme presets
 - Typography controls
@@ -143,13 +150,12 @@ Features:
 - Arrow controls
 - Dot controls
 - Height settings
-- Ratio settings
 - Cache settings
 - Export support
 
 ---
 
-### Global Overlay System
+## Global Overlay System
 
 Built-in overlay engine shared across supported templates.
 
@@ -166,11 +172,9 @@ Overlay Controls:
 - Overlay Opacity
 - Overlay Style
 
-Provides improved readability and editorial presentation without requiring template-specific overlay settings.
-
 ---
 
-### Theme Presets
+## Theme Presets
 
 Built-in theme presets:
 
@@ -181,11 +185,9 @@ Built-in theme presets:
 - Dark
 - Light
 
-Themes provide consistent styling across supported templates.
-
 ---
 
-### Typography Controls
+## Typography Controls
 
 Global typography management:
 
@@ -196,11 +198,9 @@ Global typography management:
 - Read More styling
 - Content color controls
 
-Provides consistent presentation across templates.
-
 ---
 
-### Advanced Image Handling
+## Advanced Image Handling
 
 Image rendering is designed for performance-oriented websites.
 
@@ -210,55 +210,40 @@ Features:
 - Cached Resize mode
 - Cached Crop mode
 - Dedicated cached image dimensions
-- Independent slider dimensions
 - Automatic thumbnail generation
-- Automatic thumbnail retention management
-- Manual image cache cleanup tools
+- Automatic thumbnail retention
+- Manual image cache cleanup
 
 Benefits:
 
 - Reduced bandwidth usage
 - Faster frontend rendering
-- Improved cache efficiency
-- Better support for card-based templates
+- Better cache efficiency
 - Improved performance on high-traffic websites
 
 ---
 
-### Intelligent Thumbnail Cache
-
-DevArt Slider includes a dedicated thumbnail cache system.
+## Intelligent Thumbnail Cache
 
 Features:
 
 - File-based thumbnail cache
 - Cached image generation
-- Configurable thumbnail retention period
-- Automatic expired thumbnail cleanup
-- Manual image cache cleanup
+- Automatic cleanup
+- Configurable retention period
 - Cloudflare-friendly architecture
-
-Designed specifically for editorial websites that continuously publish new content and images.
 
 ---
 
-### Joomla Native Updates
+## Joomla Native Updates
 
 Supports Joomla native updates via GitHub.
 
-After installation future releases can be installed through:
-
 System → Extensions → Update
-
-Update Server:
-
-https://raw.githubusercontent.com/devartgr/joomla-devart-slider/main/update.xml
 
 ---
 
 ## Included Extensions
-
-This package installs:
 
 - com_devartslider
 - mod_devartslider
@@ -274,61 +259,48 @@ This package installs:
 
 ## Installation
 
-1. Download the latest release package
-2. Open:
-
-   System → Extensions → Install
-
-3. Upload the ZIP package
-4. Open:
-
-   Components → DevArt Slider
-
-5. Create a slider
-6. Publish the module where required
+1. Install the package.
+2. Open **Components → DevArt Slider**.
+3. Create a slider.
+4. Choose a content source.
+5. Publish the module.
 
 ---
 
 ## Performance
 
-Built for production environments.
+Built for production websites.
 
 Features include:
 
-- Cache-first frontend rendering
+- Cache-first rendering
 - File-based frontend cache
 - Dedicated thumbnail cache
-- Configurable cache duration
-- Configurable thumbnail retention
-- Minimal frontend JavaScript
-- Lightweight CSS architecture
-- Safe query limits
-- Joomla Page Cache friendly
-- CDN friendly
 - Cloudflare compatible
-- High-traffic deployment friendly
+- CDN friendly
+- Lightweight frontend assets
+- Optimized database queries
+- High-traffic deployment ready
 
 Suitable for:
 
 - News portals
 - Editorial websites
 - Magazine websites
+- Business directories
 - Enterprise Joomla deployments
-- High-volume content websites
 
 ---
 
 ## Security Highlights
 
-- Joomla ACL permissions support
-- CSRF protection for administrator actions
-- SQL injection protection through Joomla database APIs
-- XSS-safe frontend rendering
+- Joomla ACL support
+- CSRF protection
+- SQL injection protection
+- XSS-safe rendering
 - Strict input validation
-- Protected cache directory structure
-- Secure Joomla native architecture
-- GPL licensed
-- JED-ready packaging
+- Protected cache directories
+- Modern Joomla architecture
 
 ---
 
@@ -338,98 +310,80 @@ Supported:
 
 - Joomla 6.x
 - PHP 8.2+
-- Joomla native update system
-- Modern Joomla MVC architecture
+- Joomla native updates
+- Modern Joomla MVC
 
 Not Supported:
 
 - Joomla 3
 - Joomla 4
 - Joomla 5
-- Legacy PHP versions
+- Legacy PHP
 
 ---
 
 ## Current Version
 
-1.0.4
+**1.0.5**
 
 ---
 
-## What's New in 1.0.4
+## What's New in 1.0.5
 
 ### Added
 
-- Global Overlay Style system
-- Uniform overlay mode
-- Bottom Focus overlay mode
-- Left Focus overlay mode
-- Image shadow support for Split Image / Text Slider
-- Overlay content mode for Classic News Sidebar
-- Theme-colored active preview highlighting
-- Improved editorial thumbnail presentation for Magazine Spotlight
-
-### Fixed
-
-- Overlay rendering inconsistencies across templates
-- Overlay disable behavior in affected templates
-- Navigation positioning issues in preview-based templates
-- Dots and arrows rendering issues in multiple templates
-- Template configuration inconsistencies
-- Language string display issues in template settings
+- Native DevArt Business source support
+- Business category filtering
+- Include Child Categories option
+- Featured Handling for business listings
+- Business ordering support
 
 ### Improved
 
-- Split Image / Text Slider layout and navigation
-- Full Width Overlay rendering behavior
-- Old Style Preview navigation controls
-- Classic News Sidebar preview rendering
-- Magazine Spotlight editorial presentation
-- Overlay flexibility for editorial websites
-- Template-specific settings visibility
-- Administrator usability and configuration consistency
+- Extended slider architecture to support multiple native DevArt content sources
+- Business items use the existing rendering engine
+- Business source uses the existing image pipeline
+- Business source uses the existing cache pipeline
+- Simplified Business source configuration
+- Improved internal source normalization
 
-### Removed
+### Notes
 
-- Unused Image Dark Overlay setting from Clean Fade Hero
-- Unused Transition Effect setting from Hover Overlay Cards
-- Unused Transition Speed setting from Hover Overlay Cards
+- No template changes
+- No CSS changes
+- No JavaScript changes
+- No database changes
+- Existing sliders remain fully compatible
+- Safe update from all previous 1.0.x releases
 
 ---
 
 ## Production Recommendations
 
-Recommended settings for news and editorial websites:
-
 ### Frontend
 
 - Enable caching
 - Use Cached Resize images
-- Use optimized image dimensions
-- Limit excessive slide counts
-- Use poster images for video slides
-
-### Cache
-
-- Slider cache: 15–60 minutes
-- Thumbnail retention: 7–30 days
-- Use manual cache clearing only when required
+- Optimize image dimensions
+- Keep slide counts reasonable
 
 ### Content
 
-- Use Featured Articles for homepage highlights
-- Use Selected Articles for curated content
+- Use Featured Articles for editorial highlights
+- Use DevArt Business for directory showcases
 - Use Custom Slides for campaigns and promotions
 
 ---
 
 ## Author
 
-Kostas Stathopoulos  
-DevArt  
+Kostas Stathopoulos
+
+DevArt
+
 https://devart.gr
 
-GitHub Repository:
+GitHub:
 
 https://github.com/devartgr/joomla-devart-slider
 
@@ -441,10 +395,8 @@ GNU General Public License v3.0 (GPLv3)
 
 ---
 
-## Disclaimer / Limitation of Liability
+## Disclaimer
 
 This software is provided "as is", without warranty of any kind.
 
-DevArt shall not be held liable for any damages, data loss, downtime, security incidents, business interruption, loss of profits, or other consequences arising from the use or inability to use this software.
-
-Always test updates in a staging environment before deploying to production systems.
+Always test updates in a staging environment before deploying to production.
