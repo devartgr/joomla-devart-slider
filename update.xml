@@ -14,7 +14,7 @@
             <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-slider/releases/download/v1.0.5/pkg_devartslider_v1.0.5.zip</downloadurl>
         </downloads>
 
-        <sha256>86f6c2e17dd817f1d7c394bfd7075cfe2c8c37a42ca2069495ad423f334b071e</sha256>
+        <sha256>bff66cc5107fe3902d3e1f80268b81b7da85284888169b5f30c22265fb70a44b</sha256>
 
         <changelogurl>https://raw.githubusercontent.com/devartgr/joomla-devart-slider/main/changelog.xml</changelogurl>
 
