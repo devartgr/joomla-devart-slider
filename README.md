@@ -1,10 +1,10 @@
 # DevArt Slider for Joomla
 
-Professional slider builder for Joomla 6, designed for editorial, news, magazine, landing pages, marketing campaigns, business directories, and high-performance content-heavy websites.
+Professional slider builder for Joomla 6, designed for editorial, news, magazine, landing pages, marketing campaigns, business directories, event websites, and high-performance content-heavy websites.
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.5-orange)
+![Release](https://img.shields.io/badge/Version-1.0.6-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -13,7 +13,7 @@ Professional slider builder for Joomla 6, designed for editorial, news, magazine
 
 DevArt Slider is a modern Joomla 6 slider package built for stable frontend content presentation, editorial storytelling, featured content promotion, video-enabled hero sections, and production-safe rendering.
 
-Designed specifically for editorial, magazine, news, landing page, corporate, business directory, and enterprise Joomla websites, DevArt Slider focuses on performance, reliability, security, and maintainability while remaining fully compatible with Joomla 6 and modern PHP versions.
+Designed specifically for editorial, magazine, news, landing page, corporate, business directory, event, and enterprise Joomla websites, DevArt Slider focuses on performance, reliability, security, and maintainability while remaining fully compatible with Joomla 6 and modern PHP versions.
 
 The package includes both a Joomla component and a Joomla frontend module for flexible deployment across any Joomla website.
 
@@ -50,6 +50,7 @@ Suitable for:
 - Marketing campaigns
 - Product showcases
 - Business directories
+- Event websites
 - Storytelling sections
 - Video hero areas
 
@@ -57,7 +58,7 @@ Suitable for:
 
 ## Flexible Content Sources
 
-Supports multiple source modes:
+Supports multiple source modes.
 
 ### Joomla Articles
 
@@ -71,7 +72,20 @@ Supports multiple source modes:
 - Selected Categories
 - Include Child Categories
 - Featured Handling
-- Ordering
+
+### DevArt Events
+
+- All Categories
+- Selected Categories
+- Include Child Categories
+- Event Time filtering
+  - Today
+  - Upcoming
+  - Past
+  - All
+- Featured Handling
+
+Events use the same event date logic as the DevArt Events component, ensuring consistent results across the frontend, modules, and slider.
 
 ### Custom Slides
 
@@ -128,6 +142,7 @@ Ideal for:
 - Landing pages
 - Featured article areas
 - Featured business areas
+- Featured event areas
 - Marketing campaigns
 
 ---
@@ -233,13 +248,15 @@ Features:
 - Configurable retention period
 - Cloudflare-friendly architecture
 
+The Business source also avoids caching empty result sets, improving reliability after content updates.
+
 ---
 
 ## Joomla Native Updates
 
 Supports Joomla native updates via GitHub.
 
-System → Extensions → Update
+**System → Extensions → Update**
 
 ---
 
@@ -288,6 +305,7 @@ Suitable for:
 - Editorial websites
 - Magazine websites
 - Business directories
+- Event websites
 - Enterprise Joomla deployments
 
 ---
@@ -324,37 +342,40 @@ Not Supported:
 
 ## Current Version
 
-**1.0.5**
+**1.0.6**
 
 ---
 
-## What's New in 1.0.5
+## What's New in 1.0.6
 
 ### Added
 
-- Native DevArt Business source support
-- Business category filtering
-- Include Child Categories option
-- Featured Handling for business listings
-- Business ordering support
+- Native DevArt Events source support
+- Event Time filtering (Today, Upcoming, Past, All)
+- Event category filtering
+- Include Child Categories support for Events
+- Featured Handling for events
 
 ### Improved
 
-- Extended slider architecture to support multiple native DevArt content sources
-- Business items use the existing rendering engine
-- Business source uses the existing image pipeline
-- Business source uses the existing cache pipeline
-- Simplified Business source configuration
-- Improved internal source normalization
+- Events now use the same event date logic as DevArt Events
+- Removed Ordering for Events source to ensure consistent event presentation
+- Improved Business source cache handling to avoid caching empty results
+- Extended native DevArt multi-source architecture
+
+### Fixed
+
+- Events source integration improvements
+- Package structure improvements
+- Namespace and compatibility fixes
+- General stability improvements
 
 ### Notes
 
-- No template changes
-- No CSS changes
-- No JavaScript changes
-- No database changes
+- No database schema changes
 - Existing sliders remain fully compatible
 - Safe update from all previous 1.0.x releases
+- Recommended update for DevArt Business and DevArt Events installations
 
 ---
 
@@ -371,6 +392,7 @@ Not Supported:
 
 - Use Featured Articles for editorial highlights
 - Use DevArt Business for directory showcases
+- Use DevArt Events for upcoming events and calendars
 - Use Custom Slides for campaigns and promotions
 
 ---
