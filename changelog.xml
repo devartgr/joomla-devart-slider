@@ -4,6 +4,43 @@
     <changelog>
         <element>com_devartslider</element>
         <type>component</type>
+        <version>1.0.6</version>
+
+        <addition>
+            <item>Added native DevArt Events source support</item>
+            <item>Added Event Time filtering with Today, Upcoming, Past and All modes</item>
+            <item>Added event category filtering with All Categories and Selected Categories modes</item>
+            <item>Added Include Child Categories option for event category filtering</item>
+            <item>Added Featured Handling option for events with Include Featured, Featured Only and Exclude Featured modes</item>
+        </addition>
+
+        <change>
+            <item>Events source now uses the same event date logic as DevArt Events instead of article publish dates</item>
+            <item>Events are selected using event occurrences stored in dates_json</item>
+            <item>Removed Ordering option for Events source to ensure consistent event-based ordering</item>
+            <item>Business source cache handling improved to prevent caching empty result sets</item>
+            <item>Extended multi-source architecture with native DevArt Events integration while preserving existing rendering pipeline</item>
+        </change>
+
+        <fix>
+            <item>Fixed Events source integration and namespace handling</item>
+            <item>Fixed package structure for cleaner Joomla installation and updates</item>
+            <item>Improved Events source compatibility with imported and recurring event data</item>
+            <item>Various internal stability and compatibility improvements</item>
+        </fix>
+
+        <note>
+            <item>No database schema changes introduced</item>
+            <item>No template changes introduced</item>
+            <item>Existing Article, Business and Manual slider sources remain fully compatible</item>
+            <item>Safe update from all previous 1.0.x releases</item>
+            <item>Recommended update for installations using DevArt Events and DevArt Business</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartslider</element>
+        <type>component</type>
         <version>1.0.5</version>
 
         <addition>
