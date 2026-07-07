@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelogs>
+<changelog>
+    <element>com_devartslider</element>
+    <type>component</type>
+    <version>1.0.7</version>
 
+    <addition>
+        <item>Added native DevArt Video source support</item>
+        <item>Added video category filtering with All Categories and Selected Categories modes</item>
+        <item>Added Include Child Categories option for video category filtering</item>
+        <item>Added Featured Handling option for videos with Include Featured, Featured Only and Exclude Featured modes</item>
+        <item>Added simplified video ordering with Newest and Oldest options</item>
+    </addition>
+
+    <change>
+        <item>Extended the multi-source slider architecture with native DevArt Video integration</item>
+        <item>Video source uses locally cached DevArt Video thumbnails for improved frontend performance</item>
+        <item>Video items are normalized into the existing slider rendering pipeline without template changes</item>
+        <item>Configuration interface aligned with DevArt Widgets for a consistent user experience</item>
+        <item>Simplified Video source configuration by exposing only the options required for editorial video sliders</item>
+    </change>
+
+    <fix>
+        <item>Fixed DevArt Video source query returning empty result sets in some installations</item>
+        <item>Fixed video category filtering</item>
+        <item>Fixed featured video handling</item>
+        <item>Fixed video ordering implementation</item>
+        <item>Improved provider integration and cache handling for DevArt Video sources</item>
+        <item>Updated package metadata, version information and release files</item>
+    </fix>
+
+    <note>
+        <item>No database schema changes introduced</item>
+        <item>No template changes introduced</item>
+        <item>Existing Article, Business, Events and Custom Slide sources remain fully compatible</item>
+        <item>Safe update from all previous 1.0.x releases</item>
+        <item>Recommended update for installations using DevArt Video</item>
+    </note>
+</changelog>
     <changelog>
         <element>com_devartslider</element>
         <type>component</type>
