@@ -1,10 +1,10 @@
 # DevArt Slider for Joomla
 
-Professional slider builder for Joomla 6, designed for editorial, news, magazine, landing pages, marketing campaigns, business directories, event websites, and high-performance content-heavy websites.
+Professional slider builder for Joomla 6, designed for editorial, news, magazine, landing pages, marketing campaigns, business directories, event websites, video portals, and high-performance content-heavy websites.
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.6-orange)
+![Release](https://img.shields.io/badge/Version-1.0.7-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -13,7 +13,7 @@ Professional slider builder for Joomla 6, designed for editorial, news, magazine
 
 DevArt Slider is a modern Joomla 6 slider package built for stable frontend content presentation, editorial storytelling, featured content promotion, video-enabled hero sections, and production-safe rendering.
 
-Designed specifically for editorial, magazine, news, landing page, corporate, business directory, event, and enterprise Joomla websites, DevArt Slider focuses on performance, reliability, security, and maintainability while remaining fully compatible with Joomla 6 and modern PHP versions.
+Designed specifically for editorial, magazine, news, landing page, corporate, business directory, event, video, and enterprise Joomla websites, DevArt Slider focuses on performance, reliability, security, and maintainability while remaining fully compatible with Joomla 6 and modern PHP versions.
 
 The package includes both a Joomla component and a Joomla frontend module for flexible deployment across any Joomla website.
 
@@ -23,7 +23,7 @@ The package includes both a Joomla component and a Joomla frontend module for fl
 
 ### Professional Slider Templates
 
-Includes multiple production-ready templates designed for different content presentation styles:
+Includes multiple production-ready templates designed for different content presentation styles.
 
 - Classic Hero
 - Full Width Overlay
@@ -51,6 +51,7 @@ Suitable for:
 - Product showcases
 - Business directories
 - Event websites
+- Video portals
 - Storytelling sections
 - Video hero areas
 
@@ -58,7 +59,7 @@ Suitable for:
 
 ## Flexible Content Sources
 
-Supports multiple source modes.
+Supports multiple native source providers through a unified rendering engine.
 
 ### Joomla Articles
 
@@ -87,6 +88,17 @@ Supports multiple source modes.
 
 Events use the same event date logic as the DevArt Events component, ensuring consistent results across the frontend, modules, and slider.
 
+### DevArt Video
+
+- All Categories
+- Selected Categories
+- Include Child Categories
+- Featured Handling
+- Newest
+- Oldest
+
+Video content is rendered using the same lightweight rendering engine, image pipeline, and caching architecture as every other supported content source.
+
 ### Custom Slides
 
 Supports:
@@ -103,21 +115,21 @@ Supports:
 - WEBM video
 - Poster images
 
-The slider architecture is designed to support multiple native DevArt content sources while preserving a single rendering engine and common template system.
+The slider architecture is designed to support multiple native DevArt content providers while preserving one common rendering pipeline and template system.
 
 ---
 
 ## Native Video Support
 
-Built-in video slide support without external dependencies.
+Built-in video support without external dependencies.
 
 Features:
 
-- MP4 video support
-- WEBM video support
-- Poster image support
-- Autoplay support
-- Hover play/pause controls
+- MP4 video
+- WEBM video
+- Poster images
+- Autoplay
+- Hover play / pause
 - Mobile-friendly rendering
 - Lightweight frontend implementation
 
@@ -131,8 +143,8 @@ Features:
 
 - Slider selector
 - Joomla native module integration
-- Menu assignment support
-- Access control support
+- Menu assignment
+- Access control
 - Flexible positioning
 
 Ideal for:
@@ -141,15 +153,16 @@ Ideal for:
 - Sidebar highlights
 - Landing pages
 - Featured article areas
-- Featured business areas
-- Featured event areas
+- Featured businesses
+- Featured events
+- Featured videos
 - Marketing campaigns
 
 ---
 
 ## Slider Management
 
-Manage sliders directly through Joomla administrator.
+Manage sliders directly through Joomla Administrator.
 
 Features:
 
@@ -159,13 +172,13 @@ Features:
 - Theme presets
 - Typography controls
 - Overlay controls
-- Overlay style controls
-- Autoplay settings
-- Navigation controls
-- Arrow controls
-- Dot controls
-- Height settings
-- Cache settings
+- Overlay styles
+- Autoplay
+- Navigation
+- Arrows
+- Dots
+- Height controls
+- Cache controls
 - Export support
 
 ---
@@ -191,7 +204,7 @@ Overlay Controls:
 
 ## Theme Presets
 
-Built-in theme presets:
+Built-in presets:
 
 - Red
 - Blue
@@ -204,57 +217,57 @@ Built-in theme presets:
 
 ## Typography Controls
 
-Global typography management:
+Global typography management.
 
 - Title size
 - Intro size
 - Badge styling
 - Date styling
 - Read More styling
-- Content color controls
+- Content colors
 
 ---
 
 ## Advanced Image Handling
 
-Image rendering is designed for performance-oriented websites.
+Image rendering is designed for high-performance websites.
 
 Features:
 
-- Original Image mode
-- Cached Resize mode
-- Cached Crop mode
-- Dedicated cached image dimensions
+- Original Image
+- Cached Resize
+- Cached Crop
+- Dedicated cache dimensions
 - Automatic thumbnail generation
-- Automatic thumbnail retention
-- Manual image cache cleanup
+- Automatic cleanup
+- Configurable retention period
+- Manual cache clearing
 
 Benefits:
 
-- Reduced bandwidth usage
-- Faster frontend rendering
+- Lower bandwidth usage
+- Faster rendering
 - Better cache efficiency
-- Improved performance on high-traffic websites
+- Production-ready performance
 
 ---
 
-## Intelligent Thumbnail Cache
+## Intelligent Cache Architecture
 
 Features:
 
-- File-based thumbnail cache
-- Cached image generation
+- File-based frontend cache
+- Intelligent thumbnail cache
 - Automatic cleanup
-- Configurable retention period
-- Cloudflare-friendly architecture
-
-The Business source also avoids caching empty result sets, improving reliability after content updates.
+- Cloudflare compatible
+- CDN friendly
+- Shared rendering pipeline across all content providers
 
 ---
 
 ## Joomla Native Updates
 
-Supports Joomla native updates via GitHub.
+Supports Joomla native updates through GitHub.
 
 **System → Extensions → Update**
 
@@ -279,7 +292,7 @@ Supports Joomla native updates via GitHub.
 1. Install the package.
 2. Open **Components → DevArt Slider**.
 3. Create a slider.
-4. Choose a content source.
+4. Select a content source.
 5. Publish the module.
 
 ---
@@ -292,12 +305,12 @@ Features include:
 
 - Cache-first rendering
 - File-based frontend cache
-- Dedicated thumbnail cache
+- Thumbnail cache
 - Cloudflare compatible
 - CDN friendly
 - Lightweight frontend assets
 - Optimized database queries
-- High-traffic deployment ready
+- High-traffic ready
 
 Suitable for:
 
@@ -306,6 +319,7 @@ Suitable for:
 - Magazine websites
 - Business directories
 - Event websites
+- Video portals
 - Enterprise Joomla deployments
 
 ---
@@ -342,40 +356,42 @@ Not Supported:
 
 ## Current Version
 
-**1.0.6**
+**1.0.7**
 
 ---
 
-## What's New in 1.0.6
+## What's New in 1.0.7
 
 ### Added
 
-- Native DevArt Events source support
-- Event Time filtering (Today, Upcoming, Past, All)
-- Event category filtering
-- Include Child Categories support for Events
-- Featured Handling for events
+- Native DevArt Video source support
+- Video category filtering
+- Include Child Categories for videos
+- Featured Handling for videos
+- Video ordering (Newest / Oldest)
 
 ### Improved
 
-- Events now use the same event date logic as DevArt Events
-- Removed Ordering for Events source to ensure consistent event presentation
-- Improved Business source cache handling to avoid caching empty results
-- Extended native DevArt multi-source architecture
+- Extended the native multi-source architecture with DevArt Video integration
+- Unified configuration across Articles, Business, Events and Video sources
+- Shared rendering, image handling and cache pipeline for Video content
+- Improved provider compatibility and frontend consistency
 
 ### Fixed
 
-- Events source integration improvements
-- Package structure improvements
-- Namespace and compatibility fixes
-- General stability improvements
+- Video provider integration improvements
+- Video category filtering improvements
+- Featured video handling improvements
+- Video query stability improvements
+- General stability and compatibility improvements
 
 ### Notes
 
 - No database schema changes
+- No template changes
 - Existing sliders remain fully compatible
 - Safe update from all previous 1.0.x releases
-- Recommended update for DevArt Business and DevArt Events installations
+- Recommended for installations using DevArt Video
 
 ---
 
@@ -392,7 +408,8 @@ Not Supported:
 
 - Use Featured Articles for editorial highlights
 - Use DevArt Business for directory showcases
-- Use DevArt Events for upcoming events and calendars
+- Use DevArt Events for upcoming events
+- Use DevArt Video for featured video sections
 - Use Custom Slides for campaigns and promotions
 
 ---
@@ -405,7 +422,7 @@ DevArt
 
 https://devart.gr
 
-GitHub:
+GitHub
 
 https://github.com/devartgr/joomla-devart-slider
 
