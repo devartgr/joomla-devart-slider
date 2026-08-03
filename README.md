@@ -4,7 +4,7 @@ Professional multi-source slider solution for Joomla 6, designed for news portal
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.8-orange)
+![Release](https://img.shields.io/badge/Version-1.0.9-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -13,11 +13,43 @@ Professional multi-source slider solution for Joomla 6, designed for news portal
 
 DevArt Slider is a modern Joomla 6 slider component and module built for creating responsive, professional content sliders from multiple Joomla and DevArt content sources.
 
-The extension is designed for production websites where performance, stability, responsive rendering, and administrator usability are essential.
+The extension is designed for production websites where performance, stability, responsive rendering, administrator usability, and safe integration handling are essential.
 
-DevArt Slider supports Joomla Articles, manually created slides, DevArt Business, DevArt Events, and DevArt Video through a unified multi-source architecture.
+DevArt Slider supports:
 
-It includes multiple production-ready templates, configurable themes, image processing, frontend caching, responsive controls, and a high-performance Joomla-style article selector designed to remain usable even on websites containing hundreds of thousands of articles.
+- Joomla Articles
+- Manually created Custom Slides
+- DevArt Business
+- DevArt Events
+- DevArt Video
+
+All content sources use a unified rendering architecture.
+
+The extension includes multiple production-ready templates, configurable themes, image processing, frontend caching, responsive controls, and a high-performance Joomla-style article selector designed to remain usable even on websites containing hundreds of thousands of articles.
+
+Optional DevArt integrations are detected safely. DevArt Slider does not require DevArt Business, DevArt Events, or DevArt Video to be installed.
+
+---
+
+## Version 1.0.9
+
+DevArt Slider 1.0.9 is a compatibility and stability hotfix for optional DevArt integrations.
+
+The update prevents administrator SQL errors on websites where one or more optional DevArt components are not installed or their required database tables are unavailable.
+
+### Version 1.0.9 Highlights
+
+- Safe optional integration detection
+- Guarded DevArt Business category loading
+- Guarded DevArt Events category loading
+- Guarded DevArt Video category loading
+- No queries against missing optional integration tables
+- Unavailable optional source types hidden from new configurations
+- Existing saved source values preserved when an integration becomes unavailable
+- No database schema changes
+- No frontend rendering changes
+- No changes to the high-performance article selector introduced in version 1.0.8
+- Existing sliders and settings remain compatible
 
 ---
 
@@ -39,7 +71,7 @@ The Selected Articles workflow uses a bounded Joomla-style modal selector with:
 - No unbounded administrator article queries
 - No requirement to increase the PHP memory limit
 
-The article selector has been successfully tested on a production-scale Joomla environment containing more than **220,000 Joomla Articles**.
+The article selector has been successfully tested on a production-scale Joomla environment containing more than **220,000 native Joomla Articles**.
 
 In this environment:
 
@@ -82,7 +114,8 @@ Create sliders from Joomla Articles using:
 - Child category inclusion
 - Featured handling
 - Configurable ordering
-- Article limits and skip values
+- Article limits
+- Article skip values
 
 ### Selected Articles
 
@@ -97,7 +130,7 @@ The Selected Articles source includes a high-performance Joomla administrator mo
 - Done action for adding selections and closing the modal
 - Selected article removal
 - Selected article reordering
-- Preservation of existing article IDs and order
+- Preservation of existing article IDs and ordering
 
 The selector stores article IDs using the existing DevArt Slider configuration format and remains compatible with previously created sliders.
 
@@ -123,7 +156,14 @@ Create sliders from DevArt Business listings with:
 - Configurable ordering
 - Existing slider image and cache pipeline
 
-DevArt Business integration is optional and becomes available when the corresponding extension is installed.
+DevArt Business integration is optional.
+
+The source becomes available only when:
+
+1. The DevArt Business component is enabled.
+2. The required DevArt Business category table exists.
+
+When the integration is unavailable, DevArt Slider does not execute category queries against the missing table.
 
 ### DevArt Events
 
@@ -142,6 +182,11 @@ Event selection uses the actual DevArt Events date information instead of Joomla
 
 DevArt Events integration is optional.
 
+The source becomes available only when:
+
+1. The DevArt Events component is enabled.
+2. The required DevArt Events category table exists.
+
 ### DevArt Video
 
 Create sliders from DevArt Video with:
@@ -153,6 +198,37 @@ Create sliders from DevArt Video with:
 - Existing slider image, rendering, and cache pipeline
 
 DevArt Video integration is optional.
+
+The source becomes available only when:
+
+1. The DevArt Video component is enabled.
+2. The required DevArt Video category table exists.
+
+---
+
+## Optional Integration Safety
+
+DevArt Business, DevArt Events, and DevArt Video are optional integrations.
+
+DevArt Slider does not assume that every DevArt extension is installed on every website.
+
+Before loading categories from an optional integration, the administrator interface verifies:
+
+- That the corresponding Joomla component is enabled
+- That the required database table exists
+
+Both conditions must be satisfied before a category query is executed.
+
+When an integration is unavailable:
+
+- No query is executed against its database table
+- No missing-table SQL error is generated
+- The unavailable source is hidden from new slider configurations
+- Existing saved source values remain visible when necessary
+- The Slider New/Edit interface continues to load normally
+- Joomla Articles and Custom Slides remain fully available
+
+This allows DevArt Slider to operate safely on websites using any combination of DevArt extensions.
 
 ---
 
@@ -240,7 +316,7 @@ Video capabilities include:
 - Video slide rendering
 - Play and pause controls
 - Hover interaction
-- Existing responsive slider pipeline
+- Responsive slider presentation
 - Integration with DevArt Video content sources
 
 ---
@@ -284,8 +360,10 @@ Important safeguards include:
 - Preservation of unavailable stored IDs without scanning the full content table
 - No exact full-table count requirement in the article selector
 - Safe Joomla MVC state handling
+- Guarded optional integration category queries
+- No queries against unavailable optional component tables
 
-These safeguards prevent the memory exhaustion and timeout problems commonly caused by loading thousands or hundreds of thousands of articles into a standard select field.
+These safeguards prevent the memory exhaustion, timeouts, and SQL errors commonly caused by loading large content collections or unavailable integration data during administrator form rendering.
 
 ---
 
@@ -301,7 +379,8 @@ Cache features include:
 - Administrator cache clearing
 - Safe handling of empty source results
 - Cached thumbnail management
-- Compatibility with reverse proxies and CDN environments
+- Compatibility with reverse proxies
+- Compatibility with CDN environments
 
 Joomla module caching options can also be used according to the website configuration.
 
@@ -353,7 +432,7 @@ DevArt Slider follows modern Joomla development patterns, including:
 - Joomla database APIs
 - Joomla administrator layouts
 - JoomlaDialog modal integration
-- SearchTools-compatible administrator interface
+- SearchTools-compatible administrator interfaces
 - CSRF protection
 - Proper input filtering
 - Escaped output
@@ -375,9 +454,9 @@ Security measures include:
 - Output escaping
 - Same-origin modal communication checks
 - Controlled administrator-only article selection
-- No exposure of SQL errors or server paths in normal operation
 - Protected cache directories
 - Safe package installation and update handling
+- Availability checks before optional integration queries
 
 ---
 
@@ -390,11 +469,11 @@ Administrators can configure permissions for actions such as:
 - Accessing the component
 - Creating sliders
 - Editing sliders
-- Changing state
+- Changing slider state
 - Deleting sliders
 - Managing component options
 
-Permission behavior follows Joomla user groups and viewing access conventions.
+Permission behavior follows Joomla user groups and Joomla ACL conventions.
 
 ---
 
@@ -402,7 +481,7 @@ Permission behavior follows Joomla user groups and viewing access conventions.
 
 Slider configurations can be exported for backup or transfer purposes.
 
-Existing Selected Articles data remains compatible with the new modal selector because the stored format is unchanged.
+Existing Selected Articles data remains compatible with the high-performance modal selector because the stored format is unchanged.
 
 Selected article IDs continue to be stored as an ordered integer list within the slider configuration.
 
@@ -413,7 +492,7 @@ Selected article IDs continue to be stored as an ordered integer list within the
 - Joomla 6.x
 - PHP 8.3 or newer
 - MySQL or MariaDB supported by Joomla 6
-- PHP GD or other required image support according to the Joomla server configuration
+- PHP image processing support according to the Joomla server configuration
 - A modern browser for administrator and frontend interfaces
 
 Optional integrations require the corresponding DevArt extension:
@@ -422,19 +501,33 @@ Optional integrations require the corresponding DevArt extension:
 - DevArt Events
 - DevArt Video
 
+The optional integrations are not required for Joomla Articles or Custom Slides.
+
 ---
 
 ## Installation
 
-1. Download the latest package: `pkg_devartslider_v1.0.8.zip`
+1. Download the latest package:
+
+   `pkg_devartslider_v1.0.9.zip`
+
 2. Open the Joomla administrator.
-3. Go to `System → Install → Extensions`.
+
+3. Go to:
+
+   `System → Install → Extensions`
+
 4. Upload and install the package.
-5. Open `Components → DevArt Slider`.
-6. Create a slider.
+
+5. Open:
+
+   `Components → DevArt Slider`
+
+6. Create or edit a slider.
+
 7. Publish a DevArt Slider module and select the required slider.
 
-The package supports Joomla update installation over previous DevArt Slider 1.0.x versions.
+The package supports installation and updates through the standard Joomla Extensions installer.
 
 ---
 
@@ -447,27 +540,60 @@ Before updating a production website:
 - Create a complete backup
 - Test the update on a staging environment
 - Verify the component administrator
+- Verify New/Edit Slider
 - Verify module output
 - Verify all content sources used by the website
 - Clear frontend and CDN caches when necessary
 
-Version 1.0.8 is a safe update from previous 1.0.x releases and does not introduce database schema changes.
+Version 1.0.9 is a safe update from previous DevArt Slider 1.0.x releases.
+
+The update introduces:
+
+- No database schema changes
+- No frontend rendering changes
+- No Selected Articles storage changes
+- No changes to existing slider identifiers
+- No changes to saved article ordering
+
+---
+
+## Version 1.0.9 Highlights
+
+DevArt Slider 1.0.9 improves compatibility with websites that do not have every optional DevArt integration installed.
+
+Highlights include:
+
+- Safe DevArt Business availability detection
+- Safe DevArt Events availability detection
+- Safe DevArt Video availability detection
+- Guarded optional integration category selectors
+- Component availability checks
+- Required database table checks
+- Prevention of missing-table SQL errors
+- Safe administrator form rendering
+- Hidden unavailable source types for new configurations
+- Preservation of existing saved unavailable source values
+- Full compatibility with Joomla Articles
+- Full compatibility with Custom Slides
+- No changes to the article selector introduced in version 1.0.8
 
 ---
 
 ## Version 1.0.8 Highlights
 
-DevArt Slider 1.0.8 introduces a major improvement to Joomla Article selection.
+DevArt Slider 1.0.8 introduced a major improvement to Joomla Article selection.
 
 Highlights include:
 
-- New Joomla-style modal article selector
+- Joomla-style modal article selector
 - Multi-article selection
 - Multi-page persistent selection
 - Fast article search
+- Article ID search
 - Previous and next page navigation
 - Selected article ordering
-- Add Selected and Done workflows
+- Add Selected workflow
+- Done workflow
 - Removal of full article table preloading
 - Bounded two-phase article loading
 - Major reduction in administrator memory use
@@ -480,7 +606,7 @@ Highlights include:
 
 ## Large-Site Validation
 
-DevArt Slider 1.0.8 was tested using a Joomla installation with more than **220,000 native Joomla Articles**.
+The high-performance article selector was tested using a Joomla installation with more than **220,000 native Joomla Articles**.
 
 The following operations were verified:
 
@@ -513,12 +639,13 @@ Instead, the extension uses bounded application architecture:
 
 - Query only the records currently required
 - Never preload complete content tables
-- Apply hard result limits
+- Apply controlled result limits
 - Use server-side pagination
 - Resolve only stored selected IDs
 - Reuse cached frontend output
 - Avoid unnecessary administrator work
 - Keep frontend and administrator responsibilities separated
+- Avoid optional integration queries when dependencies are unavailable
 
 This approach makes performance predictable and allows the extension to scale with the website’s content volume.
 
@@ -530,18 +657,40 @@ DevArt Slider is designed for:
 
 - Joomla 6.x
 - PHP 8.3+
-- Modern MySQL and MariaDB environments
+- Modern MySQL environments
+- Modern MariaDB environments
 - Joomla Atum administrator template
 - Responsive frontend templates
 - Cloudflare
 - Reverse proxies
 - CDN environments
 - Small business websites
-- Municipal and organizational websites
+- Municipal websites
+- Organizational websites
 - Editorial websites
 - Magazine portals
 - Large news websites
 - High-traffic Joomla installations
+
+---
+
+## Download
+
+Latest release:
+
+`pkg_devartslider_v1.0.9.zip`
+
+GitHub releases:
+
+https://github.com/devartgr/joomla-devart-slider/releases
+
+Direct download:
+
+https://github.com/devartgr/joomla-devart-slider/releases/download/v1.0.9/pkg_devartslider_v1.0.9.zip
+
+SHA-256:
+
+`d4207353cdd59e682e787d8eb5ae436ad96d18400252835ab89150bdcea8f82d`
 
 ---
 
@@ -580,6 +729,6 @@ See the included license file for complete licensing information.
 
 ## Author
 
-**Stathopoulos Kostas — DevArt**
+**Kostas Stathopoulos — DevArt**
 
 Website: https://devart.gr
