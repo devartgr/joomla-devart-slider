@@ -4,42 +4,324 @@
     <changelog>
         <element>com_devartslider</element>
         <type>component</type>
+        <version>1.0.9</version>
+
+        <addition>
+            <item>Added safe optional integration detection for DevArt Business, DevArt Events and DevArt Video</item>
+            <item>Added integration-aware category selector fields for optional DevArt components</item>
+            <item>Added automatic component availability and database table verification before loading optional integration categories</item>
+            <item>Added graceful handling for websites where optional DevArt extensions are not installed</item>
+        </addition>
+
+        <change>
+            <item>Replaced administrator SQL category fields for optional integrations with guarded integration-aware selector fields</item>
+            <item>Improved administrator compatibility across Joomla installations using different combinations of DevArt extensions</item>
+            <item>Unavailable optional integrations are automatically hidden from new slider configurations while preserving existing saved values</item>
+            <item>Maintained full compatibility with the high-performance article selector introduced in version 1.0.8</item>
+        </change>
+
+        <fix>
+            <item>Fixed SQL errors when opening the Slider editor on websites without DevArt Business installed</item>
+            <item>Fixed equivalent administrator compatibility issues for DevArt Events and DevArt Video integrations</item>
+            <item>Fixed optional integration category loading when related database tables are unavailable</item>
+            <item>Prevented administrator failures caused by server-side loading of optional integration SQL fields</item>
+            <item>Improved overall administrator stability across mixed DevArt installations</item>
+        </fix>
+
+        <note>
+            <item>No database schema changes introduced</item>
+            <item>No frontend rendering changes introduced</item>
+            <item>No changes to the high-performance Selected Articles architecture introduced in version 1.0.8</item>
+            <item>Existing sliders remain fully compatible</item>
+            <item>Safe update from all previous 1.0.x releases</item>
+            <item>Recommended update for all DevArt Slider installations</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartslider</element>
+        <type>component</type>
         <version>1.0.8</version>
 
         <addition>
             <item>Added native Joomla administrator modal article selector for Selected Articles source</item>
             <item>Added multi-page article selection with persistent selections during browsing</item>
             <item>Added integrated article search inside the selector modal</item>
-            <item>Added administrator article selector optimized for very large Joomla websites</item>
+            <item>Added high-performance Joomla article selector optimized for very large websites</item>
             <item>Added automatic article transfer when closing the selector with Done</item>
+            <item>Added Add Selected workflow allowing article selection across multiple pages before completing the selection</item>
         </addition>
 
         <change>
             <item>Replaced full article preloading with a high-performance two-phase article loading architecture</item>
-            <item>Administrator article selection now loads only the required records instead of the complete content table</item>
+            <item>Administrator article selection now loads only the required records instead of the complete Joomla content table</item>
             <item>Improved Selected Articles workflow using the native Joomla modal browsing experience</item>
             <item>Optimized administrator browsing, searching and pagination for large production environments</item>
-            <item>Improved overall administrator responsiveness for websites containing hundreds of thousands of articles</item>
+            <item>Improved administrator responsiveness for websites containing hundreds of thousands of Joomla Articles</item>
+            <item>Implemented server-side bounded queries with controlled pagination and incremental article loading</item>
+            <item>Introduced Joomla-style modal workflow without changing the existing Selected Articles storage format</item>
         </change>
 
         <fix>
             <item>Fixed administrator timeout when opening Selected Articles on very large Joomla installations</item>
-            <item>Fixed recursive administrator state initialization affecting the article selection dialog</item>
-            <item>Fixed excessive memory usage caused by full article list preloading</item>
+            <item>Fixed recursive Joomla state initialization affecting the article selection dialog</item>
+            <item>Fixed excessive PHP memory usage caused by full article list preloading</item>
             <item>Fixed article selector stability on high-traffic production websites</item>
-            <item>Various internal performance and compatibility improvements</item>
+            <item>Fixed administrator modal performance when working with installations containing more than 220,000 Joomla Articles</item>
+            <item>Improved overall compatibility with large production databases and Cloudflare-protected environments</item>
+            <item>Various internal performance, stability and compatibility improvements</item>
         </fix>
 
         <note>
             <item>No database schema changes introduced</item>
             <item>No frontend rendering changes introduced</item>
             <item>Existing sliders and Selected Articles configurations remain fully compatible</item>
+            <item>Existing Selected Articles IDs and ordering remain unchanged</item>
             <item>Safe update from all previous 1.0.x releases</item>
             <item>Recommended update for all installations, especially large editorial and news websites</item>
-            <item>Validated on production-scale Joomla installations containing more than 220,000 articles</item>
+            <item>Validated on production Joomla websites containing more than 220,000 native Joomla Articles</item>
         </note>
     </changelog>
 
-    <!-- Existing changelog entries (1.0.7, 1.0.6, 1.0.5, 1.0.4, ...) remain unchanged below -->
+    <changelog>
+        <element>com_devartslider</element>
+        <type>component</type>
+        <version>1.0.7</version>
+
+        <addition>
+            <item>Added native DevArt Video source support</item>
+            <item>Added video category filtering with All Categories and Selected Categories modes</item>
+            <item>Added Include Child Categories option for video category filtering</item>
+            <item>Added Featured Handling option with Include Featured, Featured Only and Exclude Featured modes</item>
+            <item>Added video ordering support with Newest and Oldest options</item>
+        </addition>
+
+        <change>
+            <item>Extended the multi-source slider architecture with native DevArt Video integration</item>
+            <item>Video items are normalized into the existing slider rendering pipeline without template modifications</item>
+            <item>Video source uses the existing slider image, rendering and cache pipeline</item>
+            <item>Video source configuration follows the same simplified workflow as Business and Events sources</item>
+            <item>Configuration interface aligned across all supported DevArt content sources for a consistent administrator experience</item>
+        </change>
+
+        <fix>
+            <item>Improved DevArt Video provider integration and compatibility</item>
+            <item>Improved video category filtering</item>
+            <item>Improved featured video handling</item>
+            <item>Improved video source query handling and stability</item>
+            <item>Various internal stability and compatibility improvements</item>
+        </fix>
+
+        <note>
+            <item>No database schema changes introduced</item>
+            <item>No template changes introduced</item>
+            <item>Existing Article, Business, Events and Custom Slide sources remain fully compatible</item>
+            <item>Safe update from all previous 1.0.x releases</item>
+            <item>Recommended update for installations using DevArt Video</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartslider</element>
+        <type>component</type>
+        <version>1.0.6</version>
+
+        <addition>
+            <item>Added native DevArt Events source support</item>
+            <item>Added Event Time filtering with Today, Upcoming, Past and All modes</item>
+            <item>Added event category filtering with All Categories and Selected Categories modes</item>
+            <item>Added Include Child Categories option for event category filtering</item>
+            <item>Added Featured Handling option for events with Include Featured, Featured Only and Exclude Featured modes</item>
+        </addition>
+
+        <change>
+            <item>Events source now uses the same event date logic as DevArt Events instead of article publish dates</item>
+            <item>Events are selected using event occurrences stored in dates_json</item>
+            <item>Removed Ordering option for Events source to ensure consistent event-based ordering</item>
+            <item>Business source cache handling improved to prevent caching empty result sets</item>
+            <item>Extended multi-source architecture with native DevArt Events integration while preserving existing rendering pipeline</item>
+        </change>
+
+        <fix>
+            <item>Fixed Events source integration and namespace handling</item>
+            <item>Fixed package structure for cleaner Joomla installation and updates</item>
+            <item>Improved Events source compatibility with imported and recurring event data</item>
+            <item>Various internal stability and compatibility improvements</item>
+        </fix>
+
+        <note>
+            <item>No database schema changes introduced</item>
+            <item>No template changes introduced</item>
+            <item>Existing Article, Business and Manual slider sources remain fully compatible</item>
+            <item>Safe update from all previous 1.0.x releases</item>
+            <item>Recommended update for installations using DevArt Events and DevArt Business</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartslider</element>
+        <type>component</type>
+        <version>1.0.5</version>
+
+        <addition>
+            <item>Added native DevArt Business source support</item>
+            <item>Added business category filtering with All Categories and Selected Categories modes</item>
+            <item>Added Include Child Categories option for business category filtering</item>
+            <item>Added Featured Handling option for businesses with Include Featured, Featured Only and Exclude Featured modes</item>
+            <item>Added business ordering support for slider source queries</item>
+        </addition>
+
+        <change>
+            <item>Extended slider source architecture to support multiple DevArt content sources</item>
+            <item>Business items are normalized into the existing slider item structure</item>
+            <item>Business source uses the existing slider rendering, image handling and cache pipeline</item>
+            <item>Business source configuration is intentionally simplified for featured business showcase use cases</item>
+            <item>Show Date is hidden for Business source because business listings are evergreen content</item>
+        </change>
+
+        <note>
+            <item>No template changes introduced</item>
+            <item>No CSS or JavaScript changes introduced</item>
+            <item>No database schema changes introduced</item>
+            <item>Existing article and custom slide sources remain fully compatible</item>
+            <item>Safe update from all previous 1.0.x releases</item>
+            <item>Recommended update for installations using DevArt Business</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartslider</element>
+        <type>component</type>
+        <version>1.0.4</version>
+
+        <addition>
+            <item>Added global Overlay Style system with Uniform, Bottom Focus and Left Focus modes</item>
+            <item>Added optional image shadow support for Split Image/Text Slider</item>
+            <item>Added overlay content mode support for Classic News Sidebar</item>
+            <item>Added active slide highlighting using selected theme colors in preview-based templates</item>
+            <item>Added enhanced editorial thumbnail presentation for Magazine Spotlight</item>
+        </addition>
+
+        <fix>
+            <item>Fixed overlay rendering behavior across multiple slider templates</item>
+            <item>Fixed situations where overlays could remain visible when disabled</item>
+            <item>Fixed navigation positioning inconsistencies in preview-based templates</item>
+            <item>Fixed dots and arrows rendering behavior in multiple templates</item>
+            <item>Fixed frontend template configuration inconsistencies</item>
+            <item>Fixed language string display issues in template configuration areas</item>
+        </fix>
+
+        <change>
+            <item>Improved Split Image/Text Slider navigation layout and theme integration</item>
+            <item>Improved Full Width Overlay template overlay handling</item>
+            <item>Improved Old Style Preview navigation and thumbnail behavior</item>
+            <item>Improved Classic News Sidebar preview rendering and navigation controls</item>
+            <item>Improved Magazine Spotlight editorial layout and thumbnail presentation</item>
+            <item>Improved overlay flexibility for editorial and magazine-focused designs</item>
+            <item>Removed unused Image Dark Overlay setting from Clean Fade Hero template</item>
+            <item>Removed unused Transition Effect and Transition Speed settings from Hover Overlay Cards template</item>
+            <item>Simplified template configuration by hiding controls not used by specific templates</item>
+            <item>Improved consistency between frontend rendering and administrator settings</item>
+        </change>
+
+        <note>
+            <item>No database schema changes introduced</item>
+            <item>No migration required</item>
+            <item>Existing sliders remain fully compatible</item>
+            <item>Safe update from all previous 1.0.x releases</item>
+            <item>Recommended update for all installations</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartslider</element>
+        <type>component</type>
+        <version>1.0.3</version>
+
+        <addition>
+            <item>Added dedicated cached image width and height controls for thumbnail generation</item>
+            <item>Added automatic thumbnail cache retention management</item>
+            <item>Added scheduled cleanup support for expired cached thumbnail images</item>
+        </addition>
+
+        <fix>
+            <item>Fixed Thumbnail Retention Days setting not affecting cached thumbnail files</item>
+            <item>Fixed automatic thumbnail cache cleanup for expired cached images</item>
+            <item>Fixed image cache maintenance workflow for long-running production installations</item>
+        </fix>
+
+        <change>
+            <item>Separated slider display dimensions from cached image dimensions</item>
+            <item>Improved image handling flexibility for card-based and multi-column slider templates</item>
+            <item>Improved thumbnail generation workflow for templates using different visual layouts</item>
+            <item>Improved thumbnail cache maintenance for high-traffic editorial and news websites</item>
+            <item>Improved cached image storage management for long-running production installations</item>
+        </change>
+
+        <note>
+            <item>Thumbnail Retention Days now controls automatic cleanup of expired cached thumbnail images</item>
+            <item>Manual Clear Image Cache functionality remains available</item>
+            <item>No database schema changes introduced</item>
+            <item>No frontend rendering architecture changes introduced</item>
+            <item>Recommended update for all installations using image caching</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartslider</element>
+        <type>component</type>
+        <version>1.0.0</version>
+
+        <addition>
+            <item>Added full Joomla 6 native DevArt Slider component with modern MVC architecture</item>
+            <item>Added frontend DevArt Slider module integration</item>
+            <item>Added 14 production-ready slider templates</item>
+            <item>Added Latest Articles source mode</item>
+            <item>Added Featured Articles source mode</item>
+            <item>Added Selected Articles source mode</item>
+            <item>Added Custom Slides source mode</item>
+            <item>Added image slide rendering support</item>
+            <item>Added video slide rendering support</item>
+            <item>Added hover video play/pause controls</item>
+            <item>Added export slider configuration support</item>
+            <item>Added frontend file-based cache rendering system</item>
+            <item>Added configurable cache duration settings</item>
+            <item>Added typography controls</item>
+            <item>Added theme presets including red, blue, green, yellow, dark and light</item>
+            <item>Added dashboard statistics and production recommendations</item>
+            <item>Added administrator cache clear action</item>
+            <item>Added Joomla ACL permissions support</item>
+            <item>Added GitHub-based Joomla update server support</item>
+        </addition>
+
+        <change>
+            <item>Slider architecture designed specifically for Joomla 6 and PHP 8.2+</item>
+            <item>Frontend rendering optimized for high-traffic editorial environments</item>
+            <item>Template rendering isolated with dedicated renderer architecture</item>
+            <item>CSS and JavaScript namespaced for safe third-party template compatibility</item>
+            <item>Mobile template behavior optimized for responsive frontend rendering</item>
+            <item>Video rendering integrated with lightweight frontend controls</item>
+            <item>Cache-first architecture implemented to reduce database load</item>
+            <item>Cloudflare and CDN-friendly frontend rendering strategy used throughout</item>
+            <item>Production-safe frontend rendering with controlled query limits</item>
+            <item>Modern Joomla service provider and MVCComponent architecture used throughout</item>
+        </change>
+
+        <security>
+            <item>Added SQL injection protection using Joomla database APIs and parameterized queries</item>
+            <item>Added XSS protection through proper output escaping</item>
+            <item>Added CSRF protection for administrator actions</item>
+            <item>Added ACL enforcement for administrator operations</item>
+            <item>Added protected cache directory structure with index.html isolation</item>
+            <item>Added strict input validation for slider configuration values</item>
+        </security>
+
+        <note>
+            <item>Initial public production release of DevArt Slider for Joomla 6</item>
+            <item>Designed for editorial, magazine, news and high-traffic Joomla websites</item>
+            <item>Built for Joomla 6 only with PHP 8.2+</item>
+            <item>Always test on a staging environment before production deployment</item>
+        </note>
+    </changelog>
 
 </changelogs>
