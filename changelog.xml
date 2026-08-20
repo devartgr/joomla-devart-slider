@@ -2,6 +2,72 @@
 <changelogs>
 
     <changelog>
+        <element>pkg_devartslider</element>
+        <type>package</type>
+        <version>1.1.4</version>
+
+        <fix>
+            <item>Installer no longer extends Joomla InstallerScript (DevArt pattern): safe same-line package downgrades allowed; only PHP and Joomla minimums are enforced</item>
+            <item>Slider edit form: constrained Atum control widths so Template and Basic selects/inputs are usable; item builders, media, subforms and editors stay full width</item>
+        </fix>
+
+        <note>
+            <item>No database schema changes</item>
+            <item>Baseline feature set remains v1.1.0</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Historical ZIPs that still use the old InstallerScript sequence check cannot install over a newer version; packages from 1.1.4 onward support safe same-line rollback between themselves</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartslider</element>
+        <type>package</type>
+        <version>1.1.0</version>
+
+        <addition>
+            <item>Added Custom Lists administrator submenu and tables for reusable mixed-source lists</item>
+            <item>Added source_type=custom with Custom List selection and frontend CustomListSource resolution</item>
+            <item>Added Widgets-aligned Data tab: unified source types, Categories vs Specific items, shared item picker</item>
+            <item>Added Articles Categories advanced filters (include/exclude tags, author, date filter) and expanded ordering options</item>
+            <item>Added Joomla-native Sliders Trash (published=-2) with Published / Unpublished / Trashed filters</item>
+            <item>Added administrator, site module and package language packs for el-GR, fr-FR, de-DE, es-ES, it-IT and pt-PT</item>
+            <item>Added Access and Language fields on the Basic tab</item>
+        </addition>
+
+        <change>
+            <item>Joomla native updates target the package only (pkg_devartslider, site client)</item>
+            <item>Sliders list UX: single-row search/status/limit; Import button-only; permanent delete only from Trash; Publish restores from Trash</item>
+            <item>Content tab Simple/Advanced UX; DevArt admin tabs, submenu active-only colour and flat hero banners</item>
+            <item>All 14 slider templates frontend QA closed with overlay, transition and theme polish</item>
+            <item>PHP minimum aligned to 8.3.0; Joomla 6+ only</item>
+            <item>Inline Custom Slides (custom_slides) preserved as a first-class source alongside Custom Lists</item>
+        </change>
+
+        <fix>
+            <item>Fixed optional DevArt Business / Events / Video category loading on sites where those components are not installed</item>
+            <item>Fixed Events source date filtering to follow DevArt Events / Widgets behaviour</item>
+            <item>Fixed high-performance article selector stability (no full-table preload; no DOM-XSS regression)</item>
+            <item>Fixed Sliders toolbar selection and Trash task routing</item>
+        </fix>
+
+        <security>
+            <item>Hardened frontend query cache: non-webroot Joomla cache storage, versioned JSON payloads, purge on save/publish/duplicate/import/delete</item>
+            <item>Hardened administrator media uploads: MIME/content validation, size limits, images-root confinement and ACL</item>
+            <item>Enforced core.edit.state for publish flows; duplicate/import require core.create and core.edit</item>
+            <item>Bounded random ordering (no SQL ORDER BY RAND()); thumbnail resource caps; module HTML cache disabled in favour of access-aware component cache</item>
+            <item>Atomic duplicate/import using database transactions</item>
+        </security>
+
+        <note>
+            <item>Public 1.1.x line for Joomla 6 editorial/news sites</item>
+            <item>No database schema migration required from recent 1.0.x installs (Custom Lists tables are additive)</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>DevArt Business, Events and Video sources require the corresponding extensions when used</item>
+            <item>Recommended update for all DevArt Slider installations</item>
+        </note>
+    </changelog>
+
+    <changelog>
         <element>com_devartslider</element>
         <type>component</type>
         <version>1.0.9</version>
