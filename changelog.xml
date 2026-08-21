@@ -4,6 +4,27 @@
     <changelog>
         <element>pkg_devartslider</element>
         <type>package</type>
+        <version>1.1.5</version>
+        <addition>
+            <item>Images tab: Image Handling, cache width/height, crop position, fallback image, lazy load</item>
+            <item>Header / Footer tab (Widgets-aligned) with frontend render when enabled</item>
+            <item>Native Joomla Media Manager fields for custom slide image/video/poster</item>
+            <item>Per custom-slide video controls (none / play-pause)</item>
+        </addition>
+        <change>
+            <item>Moved image cache fields from Slider Settings to Images tab</item>
+            <item>Removed global video controls from Slider Settings</item>
+            <item>Custom slide admin media preview constrained so rows stay usable</item>
+        </change>
+        <note>
+            <item>No database schema changes</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartslider</element>
+        <type>package</type>
         <version>1.1.4</version>
 
         <addition>
@@ -54,8 +75,8 @@
     </changelog>
 
     <changelog>
-        <element>com_devartslider</element>
-        <type>component</type>
+        <element>pkg_devartslider</element>
+        <type>package</type>
         <version>1.0.9</version>
 
         <addition>
@@ -91,8 +112,8 @@
     </changelog>
 
     <changelog>
-        <element>com_devartslider</element>
-        <type>component</type>
+        <element>pkg_devartslider</element>
+        <type>package</type>
         <version>1.0.8</version>
 
         <addition>
@@ -136,8 +157,8 @@
     </changelog>
 
     <changelog>
-        <element>com_devartslider</element>
-        <type>component</type>
+        <element>pkg_devartslider</element>
+        <type>package</type>
         <version>1.0.7</version>
 
         <addition>
@@ -174,8 +195,8 @@
     </changelog>
 
     <changelog>
-        <element>com_devartslider</element>
-        <type>component</type>
+        <element>pkg_devartslider</element>
+        <type>package</type>
         <version>1.0.6</version>
 
         <addition>
@@ -211,8 +232,8 @@
     </changelog>
 
     <changelog>
-        <element>com_devartslider</element>
-        <type>component</type>
+        <element>pkg_devartslider</element>
+        <type>package</type>
         <version>1.0.5</version>
 
         <addition>
@@ -242,8 +263,8 @@
     </changelog>
 
     <changelog>
-        <element>com_devartslider</element>
-        <type>component</type>
+        <element>pkg_devartslider</element>
+        <type>package</type>
         <version>1.0.4</version>
 
         <addition>
@@ -286,8 +307,8 @@
     </changelog>
 
     <changelog>
-        <element>com_devartslider</element>
-        <type>component</type>
+        <element>pkg_devartslider</element>
+        <type>package</type>
         <version>1.0.3</version>
 
         <addition>
@@ -320,8 +341,8 @@
     </changelog>
 
     <changelog>
-        <element>com_devartslider</element>
-        <type>component</type>
+        <element>pkg_devartslider</element>
+        <type>package</type>
         <version>1.0.0</version>
 
         <addition>
@@ -377,4 +398,3 @@
     </changelog>
 
 </changelogs>
-

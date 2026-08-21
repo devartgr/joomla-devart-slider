@@ -4,7 +4,7 @@ Professional multi-source slider solution for Joomla 6, designed for news portal
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.4-orange)
+![Release](https://img.shields.io/badge/Version-1.1.5-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -32,29 +32,33 @@ Optional DevArt integrations are detected safely. DevArt Slider does not require
 
 ---
 
-## Version 1.1.4
+## Version 1.1.5
 
-DevArt Slider **1.1.4** is the current public package on the **1.1.x** line.
+DevArt Slider **1.1.5** is the current **public** release.
 
-It includes the full **1.1.0** feature set plus installer and administrator UX fixes:
+### Highlights in 1.1.5
 
-- Safe same-line package downgrades (standalone installer — DevArt pattern; PHP/Joomla minimums only)
-- Constrained edit-form control widths so Template/Basic dropdowns are usable (builders and editors stay full width)
-- No database schema changes from 1.1.0
+- **Images tab** (after Content) — Image Handling, cache width/height, crop position, fallback image, lazy load
+- **Header / Footer tab** (after Images) — Widgets-style show/title/text/link/align; frontend render when enabled
+- **Native Joomla Media Manager** for custom slide image / video / poster
+- **Per-item video controls** on custom slides (`none` / play-pause); removed from global Slider Settings
+- Compact custom-slide media preview so admin rows stay usable
+- Tab order: Basic → Data → Content → Images → Header / Footer → Slider Settings → Template
 
-### Version 1.1.0 Highlights
+### Highlights since 1.0.9 (included through 1.1.4)
 
 - **Custom Lists** — reusable mixed-source lists with administrator submenu and frontend resolution
 - **Widgets Data parity** — unified source types, Categories vs Specific items, shared item picker; Articles advanced filters (tags, author, date, ordering)
 - **Sliders Trash** — Joomla-native trash (`published = -2`), Published / Unpublished / Trashed filters; permanent delete only from Trash
-- **Security & hardening** — non-webroot query cache, media upload validation, ACL tightening, bounded random ordering, thumbnail resource caps
+- **Security & hardening** — non-webroot query cache, media upload validation, ACL tightening, bounded random ordering, thumbnail resource caps, atomic duplicate/import
 - **Languages** — el-GR, fr-FR, de-DE, es-ES, it-IT, pt-PT (administrator, site module, package)
 - **14 templates** — frontend QA closed with overlay, transition, and theme polish
-- **Admin UX** — Content Simple/Advanced, DevArt tabs/submenu polish, Access & Language on Basic, cleaner Sliders list
+- **Admin UX** — Content Simple/Advanced, DevArt tabs/submenu polish, Access & Language on Basic, cleaner Sliders list, constrained edit-form control widths
 - Inline **Custom Slides** preserved as a first-class source alongside Custom Lists
 - Package-only Joomla update channel (`pkg_devartslider`)
+- Safe same-line package downgrades (standalone installer — DevArt pattern)
 - Joomla **6.0+** / PHP **8.3.0+** only
-
+- No database schema migration required from recent 1.0.x installs (Custom Lists tables are additive)
 ---
 
 ## Large Website Performance
@@ -540,7 +544,7 @@ The optional integrations are not required for Joomla Articles, Custom Slides, o
 
 1. Download the latest package:
 
-   `pkg_devartslider_v1.1.4.zip`
+   `pkg_devartslider_v1.1.5.zip`
 
 2. Open the Joomla administrator.
 
@@ -576,7 +580,7 @@ Before updating a production website:
 - Verify all content sources used by the website
 - Clear frontend and CDN caches when necessary
 
-Version **1.1.4** is a safe update from previous DevArt Slider **1.0.x** and **1.1.x** releases.
+Version **1.1.5** is a safe update from previous DevArt Slider **1.0.x** and **1.1.x** releases.
 
 Typical update characteristics:
 
@@ -591,19 +595,23 @@ Historical ZIPs that still use the old `InstallerScript` sequence check cannot i
 
 ## Version History Highlights
 
+### 1.1.5 (current public release)
+
+- Images tab (cache/crop/fallback/lazyload)
+- Header / Footer tab with frontend render
+- Native Joomla Media Manager for custom slides
+- Per-item video controls; compact custom-slide media UI
+
 ### 1.1.4
 
-- Safe same-line package downgrades (standalone installer)
-- Constrained administrator edit-form control widths
-
-### 1.1.0
-
+- First public package after 1.0.9
 - Custom Lists and Widgets Data parity
 - Sliders Trash and list UX
 - Security / cache / media / ACL hardening
 - Multi-language packs
 - Full template QA and admin polish
 - Package-only update channel
+- Safe same-line downgrades and constrained edit-form controls
 
 ### 1.0.9
 
@@ -691,7 +699,7 @@ DevArt Slider is designed for:
 
 Latest release:
 
-`pkg_devartslider_v1.1.4.zip`
+`pkg_devartslider_v1.1.5.zip`
 
 GitHub releases:
 
@@ -699,11 +707,11 @@ https://github.com/devartgr/joomla-devart-slider/releases
 
 Direct download:
 
-https://github.com/devartgr/joomla-devart-slider/releases/download/v1.1.4/pkg_devartslider_v1.1.4.zip
+https://github.com/devartgr/joomla-devart-slider/releases/download/v1.1.5/pkg_devartslider_v1.1.5.zip
 
 SHA-256:
 
-`a4a2b44f7c15cccb34f5867dc147e3342c8bf2283f4d30a3bc32b73cd7c93405`
+`16a0d3a79f3ef90a7cc8863b9335ff18b9d796d686e1a07c72d3bd86f5c7723f`
 
 Update metadata:
 
