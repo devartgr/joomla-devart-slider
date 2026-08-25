@@ -4,6 +4,38 @@
     <changelog>
         <element>pkg_devartslider</element>
         <type>package</type>
+        <version>1.1.7</version>
+        <addition>
+            <item>Packaged languages expanded to Widgets parity: cs-CZ, nl-NL, pl-PL, ru-RU, uk-UA, ja-JP, tr-TR, zh-CN (admin, module, package)</item>
+            <item>Administrator Dashboard hub (Widgets-style): New Slider / Sliders / Custom Lists / Options / Manage Modules / Templates</item>
+            <item>Dashboard cache maintenance: Clear slider cache and Clear image cache</item>
+            <item>Dashboard info cards and recommended production notes (translated hub strings)</item>
+            <item>Header / Footer tab: boxed Header and Footer field groups (Atum options-form)</item>
+            <item>Content tab: Title / Intro / Category / Author / Date / Read more / Mobile text groups framed only in Advanced mode</item>
+        </addition>
+        <fix>
+            <item>Multi Card Clean / Hover Overlay Cards: navigation arrows and dots no longer overlap the Header/Footer widget text</item>
+            <item>ItemSelect / picker: optional single=1 mode (radio-style one item selection)</item>
+            <item>Field attribute single="true" replaces previous selection instead of appending</item>
+            <item>Dashboard layout: restored Slider admin header/footer classes and self-contained dashboard CSS so banner, info cards and footer render reliably</item>
+            <item>Active administrator submenu background aligned to Widgets teal (#08a39a)</item>
+            <item>Corrected COM_DEVARTSLIDER_IMPORT_DONE placeholder count (3×%d) in packaged language files</item>
+        </fix>
+        <change>
+            <item>Dashboard uses a rose/orange/burgundy hub palette distinct from DevArt Widgets teal/green cards</item>
+        </change>
+        <note>
+            <item>Public release after 1.1.5 (intermediate 1.1.6 was not published; its changes are included here)</item>
+            <item>New language packs are seeded from DevArt Widgets where keys/placeholders match, with English fallback for Slider-only strings; open to native-speaker review</item>
+            <item>Hub strings fully translated for el-GR, fr-FR, de-DE, es-ES, it-IT, pt-PT; other packs use English hub text pending native review</item>
+            <item>No database schema changes</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartslider</element>
+        <type>package</type>
         <version>1.1.5</version>
         <addition>
             <item>Images tab: Image Handling, cache width/height, crop position, fallback image, lazy load</item>
