@@ -4,7 +4,7 @@ Professional multi-source slider solution for Joomla 6, designed for news portal
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.5-orange)
+![Release](https://img.shields.io/badge/Version-1.1.7-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -32,9 +32,18 @@ Optional DevArt integrations are detected safely. DevArt Slider does not require
 
 ---
 
-## Version 1.1.5
+## Version 1.1.7
 
-DevArt Slider **1.1.5** is the current **public** release.
+DevArt Slider **1.1.7** is the current **public** release.
+
+### Highlights in 1.1.7
+
+- **15 packaged languages** — Widgets parity (added cs-CZ, nl-NL, pl-PL, ru-RU, uk-UA, ja-JP, tr-TR, zh-CN)
+- **Administrator Dashboard hub** — New Slider / Sliders / Custom Lists / Options / Modules / Templates; Clear slider cache and Clear image cache
+- **Header / Footer** field groups framed; **Content** groups framed only in Advanced mode
+- **Multi Card Clean / Hover Overlay** — arrows and dots no longer overlap Header/Footer text
+- **ItemSelect / picker** optional single-item mode (`single=1` / `single="true"`)
+- Active administrator submenu colour aligned to Widgets teal (`#08a39a`)
 
 ### Highlights in 1.1.5
 
@@ -51,7 +60,7 @@ DevArt Slider **1.1.5** is the current **public** release.
 - **Widgets Data parity** — unified source types, Categories vs Specific items, shared item picker; Articles advanced filters (tags, author, date, ordering)
 - **Sliders Trash** — Joomla-native trash (`published = -2`), Published / Unpublished / Trashed filters; permanent delete only from Trash
 - **Security & hardening** — non-webroot query cache, media upload validation, ACL tightening, bounded random ordering, thumbnail resource caps, atomic duplicate/import
-- **Languages** — el-GR, fr-FR, de-DE, es-ES, it-IT, pt-PT (administrator, site module, package)
+- **Languages** — el-GR, fr-FR, de-DE, es-ES, it-IT, pt-PT (administrator, site module, package); expanded further in 1.1.7
 - **14 templates** — frontend QA closed with overlay, transition, and theme polish
 - **Admin UX** — Content Simple/Advanced, DevArt tabs/submenu polish, Access & Language on Basic, cleaner Sliders list, constrained edit-form control widths
 - Inline **Custom Slides** preserved as a first-class source alongside Custom Lists
@@ -544,7 +553,7 @@ The optional integrations are not required for Joomla Articles, Custom Slides, o
 
 1. Download the latest package:
 
-   `pkg_devartslider_v1.1.5.zip`
+   `pkg_devartslider_v1.1.7.zip`
 
 2. Open the Joomla administrator.
 
@@ -580,7 +589,7 @@ Before updating a production website:
 - Verify all content sources used by the website
 - Clear frontend and CDN caches when necessary
 
-Version **1.1.5** is a safe update from previous DevArt Slider **1.0.x** and **1.1.x** releases.
+Version **1.1.7** is a safe update from previous DevArt Slider **1.0.x** and **1.1.x** releases.
 
 Typical update characteristics:
 
@@ -595,7 +604,15 @@ Historical ZIPs that still use the old `InstallerScript` sequence check cannot i
 
 ## Version History Highlights
 
-### 1.1.5 (current public release)
+### 1.1.7 (current public release)
+
+- 15 packaged languages (Widgets parity)
+- Administrator Dashboard hub and cache maintenance
+- Header / Footer and Content Advanced field grouping
+- Multi Card Clean / Hover Overlay Header/Footer overlap fix
+- ItemSelect single-item mode; active submenu teal (`#08a39a`)
+
+### 1.1.5
 
 - Images tab (cache/crop/fallback/lazyload)
 - Header / Footer tab with frontend render
@@ -699,7 +716,7 @@ DevArt Slider is designed for:
 
 Latest release:
 
-`pkg_devartslider_v1.1.5.zip`
+`pkg_devartslider_v1.1.7.zip`
 
 GitHub releases:
 
@@ -707,11 +724,11 @@ https://github.com/devartgr/joomla-devart-slider/releases
 
 Direct download:
 
-https://github.com/devartgr/joomla-devart-slider/releases/download/v1.1.5/pkg_devartslider_v1.1.5.zip
+https://github.com/devartgr/joomla-devart-slider/releases/download/v1.1.7/pkg_devartslider_v1.1.7.zip
 
 SHA-256:
 
-`16a0d3a79f3ef90a7cc8863b9335ff18b9d796d686e1a07c72d3bd86f5c7723f`
+`6158b24434a28b7e84b706662712200aed4c7deff7c629af5452d60ec6b8733f`
 
 Update metadata:
 
