@@ -4,6 +4,19 @@
     <changelog>
         <element>pkg_devartslider</element>
         <type>package</type>
+        <version>1.1.8</version>
+        <fix>
+            <item>Multi Card Clean: preserve white card background and dark text on mobile stack mode (shared site.css no longer forces --devart-slider-bg on these cards)</item>
+        </fix>
+        <note>
+            <item>No database schema changes</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartslider</element>
+        <type>package</type>
         <version>1.1.7</version>
         <addition>
             <item>Packaged languages expanded to Widgets parity: cs-CZ, nl-NL, pl-PL, ru-RU, uk-UA, ja-JP, tr-TR, zh-CN (admin, module, package)</item>
