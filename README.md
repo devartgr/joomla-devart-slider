@@ -4,7 +4,7 @@ Professional multi-source slider solution for Joomla 6, designed for news portal
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.7-orange)
+![Release](https://img.shields.io/badge/Version-1.1.8-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -32,9 +32,13 @@ Optional DevArt integrations are detected safely. DevArt Slider does not require
 
 ---
 
-## Version 1.1.7
+## Version 1.1.8
 
-DevArt Slider **1.1.7** is the current **public** release.
+DevArt Slider **1.1.8** is the current **public** release.
+
+### Highlights in 1.1.8
+
+- **Multi Card Clean** — preserve white card background and dark text on mobile stack mode
 
 ### Highlights in 1.1.7
 
@@ -553,7 +557,7 @@ The optional integrations are not required for Joomla Articles, Custom Slides, o
 
 1. Download the latest package:
 
-   `pkg_devartslider_v1.1.7.zip`
+   `pkg_devartslider_v1.1.8.zip`
 
 2. Open the Joomla administrator.
 
@@ -589,7 +593,7 @@ Before updating a production website:
 - Verify all content sources used by the website
 - Clear frontend and CDN caches when necessary
 
-Version **1.1.7** is a safe update from previous DevArt Slider **1.0.x** and **1.1.x** releases.
+Version **1.1.8** is a safe update from previous DevArt Slider **1.0.x** and **1.1.x** releases.
 
 Typical update characteristics:
 
@@ -604,7 +608,11 @@ Historical ZIPs that still use the old `InstallerScript` sequence check cannot i
 
 ## Version History Highlights
 
-### 1.1.7 (current public release)
+### 1.1.8 (current public release)
+
+- Multi Card Clean: white card + dark text preserved on mobile stack mode
+
+### 1.1.7
 
 - 15 packaged languages (Widgets parity)
 - Administrator Dashboard hub and cache maintenance
@@ -716,7 +724,7 @@ DevArt Slider is designed for:
 
 Latest release:
 
-`pkg_devartslider_v1.1.7.zip`
+`pkg_devartslider_v1.1.8.zip`
 
 GitHub releases:
 
@@ -724,11 +732,11 @@ https://github.com/devartgr/joomla-devart-slider/releases
 
 Direct download:
 
-https://github.com/devartgr/joomla-devart-slider/releases/download/v1.1.7/pkg_devartslider_v1.1.7.zip
+https://github.com/devartgr/joomla-devart-slider/releases/download/v1.1.8/pkg_devartslider_v1.1.8.zip
 
 SHA-256:
 
-`6158b24434a28b7e84b706662712200aed4c7deff7c629af5452d60ec6b8733f`
+`9a4bb5d5200f27794aeb97d401a51162d429e666fb8e1479fc20138fc48d3898`
 
 Update metadata:
 
