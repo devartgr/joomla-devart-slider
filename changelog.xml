@@ -4,6 +4,30 @@
     <changelog>
         <element>pkg_devartslider</element>
         <type>package</type>
+        <version>2.0.0</version>
+        <addition>
+            <item>M6/2.0.0: host adapter for pkg_devartsources (legacy/shadow/plugin); Articles/Video/Business/Events via shared providers</item>
+            <item>Build-time embed of pinned pkg_devartsources 1.0.0 (companions/); installer installs/upgrades when missing/older</item>
+            <item>Options source_engine default plugin (soft cutover); legacy/shadow retained with auto-fallback</item>
+            <item>Category uppercase, autoplay pause button, template-aware srcset sizes, SWR slide cache, thumb touch-on-serve</item>
+        </addition>
+        <change>
+            <item>Public jump from 1.1.8 (no public 1.2.0); host-local custom/custom_slides stay on legacy</item>
+            <item>Frontend JS split site-core + per-template modules; WebP thumbs; validate PHPUnit + JS smoke</item>
+        </change>
+        <fix>
+            <item>safeUrl blocks protocol-relative URLs; initRoot waits for template handler; visibility/Events fail-closed hardening</item>
+        </fix>
+        <note>
+            <item>Bundled Sources is not a package child; uninstall Slider leaves Sources installed</item>
+            <item>No database schema changes</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartslider</element>
+        <type>package</type>
         <version>1.1.8</version>
         <fix>
             <item>Multi Card Clean: preserve white card background and dark text on mobile stack mode (shared site.css no longer forces --devart-slider-bg on these cards)</item>

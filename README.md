@@ -4,7 +4,7 @@ Professional multi-source slider solution for Joomla 6, designed for news portal
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.8-orange)
+![Release](https://img.shields.io/badge/Version-2.0.0-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -32,9 +32,17 @@ Optional DevArt integrations are detected safely. DevArt Slider does not require
 
 ---
 
-## Version 1.1.8
+## Version 2.0.0
 
-DevArt Slider **1.1.8** is the current **public** release.
+DevArt Slider **2.0.0** is the current **public** release (upgrade path from **1.1.8**; there was no public 1.2.0).
+
+### Highlights in 2.0.0
+
+- **Shared Sources companion** — build embeds pinned `pkg_devartsources` 1.0.0; installer installs/upgrades Sources when missing or older (never downgrades; not a package child)
+- **Soft plugin cutover** — Options default `source_engine=plugin` with legacy/shadow retained and auto-fallback; host-local Custom Lists / Custom Slides stay local
+- **Performance** — stale-while-revalidate slide cache, WebP thumbs, template-aware `sizes`, thumb touch-on-serve for retention GC
+- **Frontend** — `site-core.js` + per-template modules; autoplay pause control (WCAG); category uppercase toggle
+- **Hardening** — visibility/Events fail-closed paths, safeUrl blocks protocol-relative URLs, PHPUnit + Node JS smoke in validate
 
 ### Highlights in 1.1.8
 
@@ -557,7 +565,7 @@ The optional integrations are not required for Joomla Articles, Custom Slides, o
 
 1. Download the latest package:
 
-   `pkg_devartslider_v1.1.8.zip`
+   `pkg_devartslider_v2.0.0.zip`
 
 2. Open the Joomla administrator.
 
@@ -593,13 +601,15 @@ Before updating a production website:
 - Verify all content sources used by the website
 - Clear frontend and CDN caches when necessary
 
-Version **1.1.8** is a safe update from previous DevArt Slider **1.0.x** and **1.1.x** releases.
+Version **2.0.0** is a safe update from previous DevArt Slider **1.1.8** (and earlier **1.0.x** / **1.1.x**) releases. There was no public **1.2.0**.
 
 Typical update characteristics:
 
 - No database schema migration required from recent 1.0.x / 1.1.x (Custom Lists tables are additive)
 - Existing slider identifiers and Selected Articles ordering remain compatible
 - Inline Custom Slides remain supported
+- Bundled `pkg_devartsources` 1.0.0 is installed/upgraded automatically when missing or older
+- Options default `source_engine=plugin`; an explicit legacy/shadow choice is preserved on upgrade
 - Packages from **1.1.4** onward allow safe same-line downgrades between themselves
 
 Historical ZIPs that still use the old `InstallerScript` sequence check cannot install over a newer version.
@@ -608,7 +618,13 @@ Historical ZIPs that still use the old `InstallerScript` sequence check cannot i
 
 ## Version History Highlights
 
-### 1.1.8 (current public release)
+### 2.0.0 (current public release)
+
+- Shared Sources companion embed + soft plugin default
+- SWR slide cache, WebP thumbs, template-aware sizes, WCAG pause control
+- Frontend JS split; visibility/security hardening
+
+### 1.1.8
 
 - Multi Card Clean: white card + dark text preserved on mobile stack mode
 
@@ -724,7 +740,7 @@ DevArt Slider is designed for:
 
 Latest release:
 
-`pkg_devartslider_v1.1.8.zip`
+`pkg_devartslider_v2.0.0.zip`
 
 GitHub releases:
 
@@ -732,11 +748,11 @@ https://github.com/devartgr/joomla-devart-slider/releases
 
 Direct download:
 
-https://github.com/devartgr/joomla-devart-slider/releases/download/v1.1.8/pkg_devartslider_v1.1.8.zip
+https://github.com/devartgr/joomla-devart-slider/releases/download/v2.0.0/pkg_devartslider_v2.0.0.zip
 
 SHA-256:
 
-`9a4bb5d5200f27794aeb97d401a51162d429e666fb8e1479fc20138fc48d3898`
+`879c2fd05b1d57a7b04dfd55fc0a83df2e3ce2a8b108d19210445fc274d173d6`
 
 Update metadata:
 
