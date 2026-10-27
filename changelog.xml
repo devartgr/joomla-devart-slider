@@ -4,6 +4,26 @@
     <changelog>
         <element>pkg_devartslider</element>
         <type>package</type>
+        <version>2.0.1</version>
+        <change>
+            <item>M7: plugin-only for shared Articles/Business/Events/Video — remove in-product legacy sources, shadow compare, and Options engine switch</item>
+            <item>Installer forces source_engine=plugin and drops shadow_compare_percent on update</item>
+            <item>Fail-closed empty slides when Sources library/provider is unavailable (no legacy fallback)</item>
+        </change>
+        <fix>
+            <item>Admin: cleared Exclude categories / tags / category fancy-selects persist empty (omitted POST no longer restores previous settings)</item>
+        </fix>
+        <note>
+            <item>Host-local custom / custom_slides remain in-product</item>
+            <item>No official update-server downgrade; keep 2.0.0 ZIP on GitHub for manual rollback only</item>
+            <item>No database schema changes</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartslider</element>
+        <type>package</type>
         <version>2.0.0</version>
         <addition>
             <item>M6/2.0.0: host adapter for pkg_devartsources (legacy/shadow/plugin); Articles/Video/Business/Events via shared providers</item>

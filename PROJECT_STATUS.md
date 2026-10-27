@@ -2,10 +2,10 @@
 DevArt Slider — Modern Joomla 6 slider package with support for Joomla Articles, DevArt Video and other content sources.
 
 # Repository Status
-**2.0.0** local RC + VPS confirmed; public GitHub release **v2.0.0** published; update channel advertises **2.0.0**.
+**2.0.1** published on GitHub (`v2.0.1`); update channel advertises **2.0.1**. Latest VPS-confirmed baseline remains **2.0.0** until VPS QA for 2.0.1 is confirmed.
 
 # Current Version
-`2.0.0` (VPS confirmed; GitHub **v2.0.0** published)
+`2.0.1` (GitHub **v2.0.1** published; VPS QA pending for milestone close)
 
 # Package
 `pkg_devartslider`
@@ -28,14 +28,15 @@ DevArt Slider — Modern Joomla 6 slider package with support for Joomla Article
 `pkg_devartsources` **1.0.0** — SHA-256 `40ba16f9b975f2f7a192ae10a9e8d66738d6e580c6ecdda0153344c9c0135411`
 
 # Local Release Copy (public production)
-`releases/pkg_devartslider_v2.0.0.zip`
+`releases/pkg_devartslider_v2.0.1.zip`  
+(previous: `releases/pkg_devartslider_v2.0.0.zip` — keep for manual rollback)
 
 # Last Published GitHub Release
-`v2.0.0` — public update.xml advertises **2.0.0**.
+`v2.0.1` — public update.xml advertises **2.0.1**.
 
 # Public update.xml (production)
 https://raw.githubusercontent.com/devartgr/joomla-devart-slider/main/update.xml  
-(advertises `2.0.0`)
+(advertises `2.0.1`)
 
 # Verification Status
 **2.0.0** VPS confirmed (2026-10-01): soft cutover — Options default `source_engine=plugin` (explicit legacy/shadow preserved on upgrade); build embeds pinned Sources; installer installs/upgrades Sources when missing/older (never downgrades). Includes prior soak (SWR, SLD-R9, sizes/CF, UI controls, CustomList SourceEngine, review-close, category uppercase, Devin R2–R5, JS/safeUrl, P/N). Host-local `custom` / `custom_slides` remain legacy. Root `update.xml` advertises **2.0.0**.
@@ -43,27 +44,33 @@ https://raw.githubusercontent.com/devartgr/joomla-devart-slider/main/update.xml
 Previous production baseline was **1.1.8**.
 
 # Last Completed
-Slider **2.0.0** published on GitHub (`v2.0.0`). Widgets triad publish remains separate when ready.
+Slider **2.0.1** published on GitHub (`v2.0.1`): M7 plugin-only + admin clear multi-select fix. Artifact SHA-256 `31f3c29ccbfd1468fbe0c6948f32a80094c6780ab0e0740e6d4aa2f4fd5775dd`. Local Herd + harness QA green. **VPS QA pending** before closing milestone / marking verified.
 
 # Current Milestone
-Public Slider 2.0.0 shipped. Next: Widgets 2.0.0 with the **same** Sources pin when authorized.
+Awaiting VPS confirmation for **2.0.1**.
 
 # Next candidates
-1. Widgets `2.0.0` (+ Sources public if needed) with the **same** Sources pin — when explicitly agreed
-2. **M7** (post-2.0.0 production soak): plugin-only — remove in-product legacy source paths for Articles/Business/Events/Video; keep host-local `custom` / `custom_slides`. See M7 policy below.
+1. VPS install/QA for **2.0.1** → close milestone / update verified package fields.
+2. **Events `publish_down` parity (from DevArt Events 1.1.4 audit):**
+   `CachedItemVisibility` calls `visibleIntegrationIds(..., false)` for events (skips
+   `publish_down`). After Events 1.1.4, `com_devartevents` Visibility uses both
+   `publish_up` and `publish_down`. Align Slider events visibility with Events + Sources
+   Events provider in one coordinated milestone (also Widgets).
+3. Optional standalone Sources public repo/release if operators need it outside host packages
 4. Widgets: `image_fallback` field (separate product task if needed)
 
-# M7 policy (after 2.0.0 — not this cut)
-- **Goal:** plugin-only runtime for shared sources; delete legacy Article/Business/Events/Video source classes and shadow compare once production soak is clean.
+# M7 policy (shipped in 2.0.1)
+- **Goal:** plugin-only runtime for shared sources; delete legacy Article/Business/Events/Video source classes and shadow compare.
+- Host-local `custom` / `custom_slides` remain in-product.
 - **No official downgrade** via update.xml / Joomla update server.
-- **Safety net (one release cycle after M7 ships):** keep the previous ZIP (e.g. `2.0.0`) on GitHub Releases for **manual** reinstall only if a site must roll back; document backup + staging in release notes.
-- **Sources companion** continues never-downgrade; rolling back the host ZIP does not downgrade Sources.
-- **Optional bridge before hard delete:** one intermediate release may keep an emergency Options `legacy` switch; remove it with M7 hard cut.
-- Prefer staging + backup over package downgrade for recovery.
+- **Safety net:** keep `2.0.0` on GitHub Releases for **manual** reinstall only.
+- Sources companion continues never-downgrade.
 
 # Update Channel — Pending External Actions
-- Public channel is **v2.0.0**.
-- Keep Widgets/Sources publish coordinated when those products ship.
+- Public Slider channel is **v2.0.1**.
+- Public Widgets channel is **v2.0.0** (same Sources pin).
+- Keep **v2.0.0** ZIP on GitHub for manual rollback only (no update-server downgrade).
+- Standalone Sources `update.xml` not published (companion-only distribution).
 
 # Widgets Parity Reminder
 Slider retains **inline Custom Slides** (`custom_slides`) as a first-class source. Widgets Data parity must not remove or break it. See `docs/roadmap-widgets-data-parity.md` and `docs/source-engine.md`.

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <updates>
-  <update>
-    <name>DevArt Slider</name>
-    <description>Professional Joomla 6 slider package for editorial/news websites.</description>
-    <element>pkg_devartslider</element>
-    <type>package</type>
-    <client>site</client>
-    <version>2.0.0</version>
-    <infourl title="DevArt Slider">https://github.com/devartgr/joomla-devart-slider</infourl>
-    <downloads>
-      <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-slider/releases/download/v2.0.0/pkg_devartslider_v2.0.0.zip</downloadurl>
-    </downloads>
-    <sha256>879c2fd05b1d57a7b04dfd55fc0a83df2e3ce2a8b108d19210445fc274d173d6</sha256>
-    <tags>
-      <tag>stable</tag>
-    </tags>
-    <changelogurl>https://raw.githubusercontent.com/devartgr/joomla-devart-slider/main/changelog.xml</changelogurl>
-    <targetplatform name="joomla" version="6.*"/>
-    <php_minimum>8.3.0</php_minimum>
-    <maintainer>Kostas Stathopoulos</maintainer>
-    <maintainerurl>https://devart.gr</maintainerurl>
-  </update>
+    <update>
+        <name>DevArt Slider</name>
+        <description>Professional Joomla 6 slider package for editorial/news websites.</description>
+        <element>pkg_devartslider</element>
+        <type>package</type>
+        <client>site</client>
+        <version>2.0.1</version>
+        <infourl title="DevArt Slider">https://github.com/devartgr/joomla-devart-slider</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-slider/releases/download/v2.0.1/pkg_devartslider_v2.0.1.zip</downloadurl>
+        </downloads>
+        <sha256>31f3c29ccbfd1468fbe0c6948f32a80094c6780ab0e0740e6d4aa2f4fd5775dd</sha256>
+        <tags>
+            <tag>stable</tag>
+        </tags>
+        <changelogurl>https://raw.githubusercontent.com/devartgr/joomla-devart-slider/main/changelog.xml</changelogurl>
+        <targetplatform name="joomla" version="6.*" />
+        <php_minimum>8.3.0</php_minimum>
+        <maintainer>Kostas Stathopoulos</maintainer>
+        <maintainerurl>https://devart.gr</maintainerurl>
+    </update>
 </updates>
