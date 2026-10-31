@@ -4,6 +4,31 @@
     <changelog>
         <element>pkg_devartslider</element>
         <type>package</type>
+        <version>2.0.2</version>
+        <fix>
+            <item>Thumb encode .lock/.tmp siblings removed after write; Clear image cache + retention GC include them</item>
+            <item>After image-cache clear, multi-card sliders prioritize primary thumbs (budget 8) so cards are not left on the original image while srcset sizes fill later</item>
+            <item>Multi-card: above-the-fold cards use eager + high fetchpriority + sync decode; infinite clones upgrade after images are ready without hiding the track</item>
+            <item>PluginSourceAdapter uses SliderCache::remember() (SWR + single-flight)</item>
+            <item>Video Sources random: bounded pool + shuffle (no SQL RAND); refreshed Sources companion pin</item>
+            <item>Events publish_down parity with Events 1.1.4 Visibility (Slider cache recheck + Sources Events provider)</item>
+            <item>Events FE empty slides: Sources EventsQuery uses applyOrderJoin; fail-closed empty selected event categories</item>
+            <item>Sources companion bumped to 1.0.1 so install upgrades past stuck 1.0.0</item>
+            <item>SliderCache remember(): serve stale when SWR revalidate throws; fillSingleFlight sets servedFromCache on peer disk hit</item>
+            <item>Request-memoize SHOW COLUMNS in CachedItemVisibility; sort access levels in Custom List cache keys</item>
+        </fix>
+        <change>
+            <item>docs/cloudflare-caching.md: System Page Cache caveat + thumb retention GC / Scheduled Task hint</item>
+        </change>
+        <note>
+            <item>No database schema changes</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartslider</element>
+        <type>package</type>
         <version>2.0.1</version>
         <change>
             <item>M7: plugin-only for shared Articles/Business/Events/Video — remove in-product legacy sources, shadow compare, and Options engine switch</item>
